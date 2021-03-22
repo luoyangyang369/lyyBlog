@@ -12,22 +12,16 @@ categories: 工具
 <!-- more -->
 
 ## 参考资料
-[vscode](https://blog.csdn.net/vinkim/article/details/81546333)
-
-## 下载
-
-[地址](https://code.visualstudio.com/) 破解版
+- [vscode](https://blog.csdn.net/vinkim/article/details/81546333)
+- [破解版下载地址](https://code.visualstudio.com/)
+- [配置 python 环境](https://www.jianshu.com/p/cbf500c22154)
 
 ## VSCode 配置 python 环境
-[参考](https://www.jianshu.com/p/cbf500c22154)
 
 安装完成后，打开软件会自动提示你安装一些重要插件，如中文语言包，Git等
 1. 主要选择安装Python插件(也可以使用Ctrl+Shift+X可以打开扩展商店然后输入Python搜索)。
-2. 选取Python解释器  
+2. 选取Python解释器
 > 使用Ctrl+Shift+P打开命令板，输入Python: Select Interpreter进行搜索。
-
-
-
 
 ## 插件推荐
 

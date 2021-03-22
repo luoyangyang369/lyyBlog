@@ -37,13 +37,13 @@ git  工作常用命令
 
 当然，用户也可以通过配置本地的git配置信息，执行git config命令预先配置好相关的用户信息，配置执行如下：
 
-```git
+```bash
 $ git config --global user.name "你的名字或昵称"
 $ git config --global user.email "你的邮箱"
 ```
 
 修改代码后，在仓库目录下执行下面命令
-```git
+```bash
 $ git add . # 将当前目录所有文件添加到git暂存区
 $ git commit -m "my first commit" # 提交并备注提交信息
 $ git push origin master # 将本地提交推送到远程仓库
@@ -52,7 +52,7 @@ $ git push origin master # 将本地提交推送到远程仓库
 > 本地初始化一个仓库，设置远程仓库地址后再做push
 和方法1的差别，在于先创建仓库。
 
-```git
+```bash
 $ git init 
 $ git remote add origin https://github.com/用户个性地址/helloWorld.git
 ```
@@ -61,7 +61,7 @@ $ git remote add origin https://github.com/用户个性地址/helloWorld.git
 
 `$ git pull origin master`
 修改/添加文件，否则与原文件相比就没有变动。
-```git
+```bash
 $ git add .
 $ git commit -m "第一次提交"
 $ git push origin master -f # -f 表示强制覆盖 需要保留线上文件则需要 pull 下代码
@@ -111,7 +111,7 @@ Git 管理项目时，文件流转的三个工作区域：
 - 以及本地仓库
 
 ### 分支相关
-```
+```bash
 $ git branch --set-upstream-to=origin/test test  与远程分支建立连接
 $ git branch：不加参数 列出本地
     -r                      # 列出远程分支
@@ -126,7 +126,7 @@ $ git checkout -b branch_name [branch/commit] # 创建并切换分支
 ```
 
 ### 其他操作
-```git
+```bash
 $ git remote add name git_address   # 关联远程库
 $ git stash # 储藏当前工作，接着到另一分支处理问题
 $ git stash list # 查看储藏栈
@@ -143,7 +143,7 @@ $ git remote：管理主机名
 
 ### 常见误操作处理方法
 
-```git
+```bash
 撤销 add：git reset HEAD
 合并 commit：
     1. 追加至上一个 commit ：git commit --amend；commit 的时间是不会变的；可加上--no-edit
