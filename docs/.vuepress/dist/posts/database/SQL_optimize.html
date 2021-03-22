@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SQL优化 | 罗洋洋的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="">
+    <meta name="description" content="罗洋洋的博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.df9cd2a4.css" as="style"><link rel="preload" href="/assets/js/app.325c42ac.js" as="script"><link rel="preload" href="/assets/js/3.39380fd8.js" as="script"><link rel="preload" href="/assets/js/1.7eb61c6a.js" as="script"><link rel="preload" href="/assets/js/23.b88a619a.js" as="script"><link rel="prefetch" href="/assets/js/10.783add8a.js"><link rel="prefetch" href="/assets/js/11.a976541f.js"><link rel="prefetch" href="/assets/js/12.d4741cbb.js"><link rel="prefetch" href="/assets/js/13.853eb8a8.js"><link rel="prefetch" href="/assets/js/14.9702e125.js"><link rel="prefetch" href="/assets/js/15.411597d0.js"><link rel="prefetch" href="/assets/js/16.277da5ec.js"><link rel="prefetch" href="/assets/js/17.f1372daf.js"><link rel="prefetch" href="/assets/js/18.15cbd582.js"><link rel="prefetch" href="/assets/js/19.691ff113.js"><link rel="prefetch" href="/assets/js/20.c18686d0.js"><link rel="prefetch" href="/assets/js/21.25322c3d.js"><link rel="prefetch" href="/assets/js/22.608ab123.js"><link rel="prefetch" href="/assets/js/24.69e5d72a.js"><link rel="prefetch" href="/assets/js/25.19bb2e93.js"><link rel="prefetch" href="/assets/js/26.ce8ea2a2.js"><link rel="prefetch" href="/assets/js/27.a7d10389.js"><link rel="prefetch" href="/assets/js/28.d1c3e302.js"><link rel="prefetch" href="/assets/js/29.94b98393.js"><link rel="prefetch" href="/assets/js/30.d59a032f.js"><link rel="prefetch" href="/assets/js/31.878302fe.js"><link rel="prefetch" href="/assets/js/32.4652539c.js"><link rel="prefetch" href="/assets/js/33.8bfe4e15.js"><link rel="prefetch" href="/assets/js/34.e1929e5b.js"><link rel="prefetch" href="/assets/js/35.4d3ad4ca.js"><link rel="prefetch" href="/assets/js/36.8848a40a.js"><link rel="prefetch" href="/assets/js/37.4d7e0796.js"><link rel="prefetch" href="/assets/js/38.6dd2b5d9.js"><link rel="prefetch" href="/assets/js/39.2dc08c90.js"><link rel="prefetch" href="/assets/js/4.88a447aa.js"><link rel="prefetch" href="/assets/js/40.325b789a.js"><link rel="prefetch" href="/assets/js/41.c064995c.js"><link rel="prefetch" href="/assets/js/42.a3e43ca0.js"><link rel="prefetch" href="/assets/js/43.978b370c.js"><link rel="prefetch" href="/assets/js/44.f8b70edc.js"><link rel="prefetch" href="/assets/js/45.1515e76b.js"><link rel="prefetch" href="/assets/js/46.4d5e79ee.js"><link rel="prefetch" href="/assets/js/47.cc16dfcc.js"><link rel="prefetch" href="/assets/js/5.2aa46c00.js"><link rel="prefetch" href="/assets/js/6.d8a9075a.js"><link rel="prefetch" href="/assets/js/7.14f63562.js"><link rel="prefetch" href="/assets/js/8.575e7527.js"><link rel="prefetch" href="/assets/js/9.7e2ba4db.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.df9cd2a4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>罗洋洋的博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>罗洋洋的博客</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">罗洋洋的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/bash/" class="nav-link"><i class="undefined"></i>
+  bash
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/计算机/" class="nav-link"><i class="undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/categories/协议/" class="nav-link"><i class="undefined"></i>
+  协议
+</a></li><li class="dropdown-item"><!----> <a href="/categories/密码学/" class="nav-link"><i class="undefined"></i>
+  密码学
+</a></li><li class="dropdown-item"><!----> <a href="/categories/MySQL/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/多媒体/" class="nav-link"><i class="undefined"></i>
+  多媒体
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据结构/" class="nav-link"><i class="undefined"></i>
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hexo/" class="nav-link"><i class="undefined"></i>
+  hexo
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/问题/" class="nav-link"><i class="undefined"></i>
+  问题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  归档
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      高级
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>算法</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese.html" class="nav-link"><i class="undefined"></i>
+  冒泡
+</a></li><li class="dropdown-subitem"><a href="/language/japanese.html" class="nav-link"><i class="undefined"></i>
+  快速
+</a></li></ul></li><li class="dropdown-item"><h4>设计模式</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese.html" class="nav-link"><i class="undefined"></i>
+  工厂
+</a></li><li class="dropdown-subitem"><a href="/language/chinese.html" class="nav-link"><i class="undefined"></i>
+  单例
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><!----> <!----> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>35</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>23</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6><li class="social-item" data-v-828910c6><i class="iconfont reco-github" style="color:#f47e60;" data-v-828910c6></i></li></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/bash/" class="nav-link"><i class="undefined"></i>
+  bash
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/计算机/" class="nav-link"><i class="undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/categories/协议/" class="nav-link"><i class="undefined"></i>
+  协议
+</a></li><li class="dropdown-item"><!----> <a href="/categories/密码学/" class="nav-link"><i class="undefined"></i>
+  密码学
+</a></li><li class="dropdown-item"><!----> <a href="/categories/MySQL/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/多媒体/" class="nav-link"><i class="undefined"></i>
+  多媒体
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据结构/" class="nav-link"><i class="undefined"></i>
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hexo/" class="nav-link"><i class="undefined"></i>
+  hexo
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/问题/" class="nav-link"><i class="undefined"></i>
+  问题
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  归档
+</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  External
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      高级
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>算法</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese.html" class="nav-link"><i class="undefined"></i>
+  冒泡
+</a></li><li class="dropdown-subitem"><a href="/language/japanese.html" class="nav-link"><i class="undefined"></i>
+  快速
+</a></li></ul></li><li class="dropdown-item"><h4>设计模式</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/language/chinese.html" class="nav-link"><i class="undefined"></i>
+  工厂
+</a></li><li class="dropdown-subitem"><a href="/language/chinese.html" class="nav-link"><i class="undefined"></i>
+  单例
+</a></li></ul></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>SQL优化</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><!---->
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">SQL优化</h1> <div data-v-1ff7123e><!----> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>4/10/2019</span></i> <i class="iconfont reco-eye" data-v-1ff7123e><span id="/posts/database/SQL_optimize.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-1ff7123e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>MySQL</span></i></div></div> <div class="theme-reco-content content__default"><p><img src="http://www.youhutong.com/static/appImage/article/thumb/8e43ba8c3810921daff968b4105fbfa5.png" alt="mysql"></p> <h2 id="连接查询-联合查询-子查询"><a href="#连接查询-联合查询-子查询" class="header-anchor">#</a> 连接查询 联合查询 子查询</h2> <ul><li>连接查询</li></ul> <p>连接查询就是将多个表联合起来查询，连接查询方式有内连接、外连接、自然连接、交叉连接。连接查询使得可以同时查看多张表中数据。</p> <div class="language- extra-class"><pre><code>- 内连接：有条件连接，多个表之间依据指定条件连接，匹配结果是保留符合匹配结果的记录。
+- 外连接：与内连接不同的是不管匹配符不符合都保留，根据外连接连接方式来决定保留哪张表，比如保留左表的话，那么左表无法匹配右表时，保留左表数据，然后置右表字段数据为null.
+- 自然连接：有条件连接，自动依据“同名字段”连接（多个同名字段就都作为条件）。
+- 交叉连接cross join：无条件连接，将每一条记录与另外一个表的每一条记录连接（笛卡尔积），结果是字段数等于原来字段数之和，记录数等于之前各个表记录数之乘积。
+</code></pre></div><p>补充：在多个表中，为了区分每个表，以及简便使用，可以使用表别名。</p> <ul><li>联合查询</li></ul> <p>联合查询是将多个查询结果在记录上进行拼接。（相当于将其他表的查询记录结果连接到第一个表的后面）【因为是拼接，所以<strong>多个查询结果的字段数必须相同</strong>】【拼接不在意数据类型，比如第一个表的第一个字段是int,但后面的表中的varchar依然可以拼接到第一列中】</p> <p>语法：select语句 union select语句…;</p> <p>补充：union可以有选项，加在union 后面，all选项是不对相同去重，distinct是去重。</p> <ul><li>子查询</li></ul> <p>子查询是嵌套在查询语句中的查询。
+可以分为三类：</p> <p>from子查询：子查询跟在from之后的；一般用在“先查出二维表，再处理”的情况。
+如：select cid,cname from (select * from class where cname=&quot;python&quot;) as c;</p> <p>where子查询：子查询跟在where条件中；一般用在“先查询出指定条件再查询”的情况
+如：select * from student where cid=(select cid from class where cname=&quot;python&quot;);</p> <p>exist子查询：子查询在exist语句里面；一般用作“存在才做”的情况
+如：select * from class where exists(select * from  student where cid=1) and cid=1;</p> <h2 id="explain-优化神器"><a href="#explain-优化神器" class="header-anchor">#</a> explain 优化神器</h2> <p><a href="https://segmentfault.com/a/1190000008131735" target="_blank" rel="noopener noreferrer">参考<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="explain-输出格式"><a href="#explain-输出格式" class="header-anchor">#</a> EXPLAIN 输出格式</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; explain select * from user_info where id = 2\G
+*************************** 1. row ***************************
+           id: 1
+  select_type: SIMPLE
+        table: user_info
+   partitions: NULL
+         type: const
+possible_keys: PRIMARY
+          key: PRIMARY
+      key_len: 8
+          ref: const
+         rows: 1
+     filtered: 100.00
+        Extra: NULL
+1 row in set, 1 warning (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>各列的含义如下:</p> <ul><li><strong>id: SELECT 查询的标识符. 每个 SELECT 都会自动分配一个唯一的标识符.</strong></li> <li><strong>select_type: SELECT 查询的类型.</strong></li> <li><strong>table: 查询涉及的表或衍生表</strong></li> <li><strong>partitions: 匹配的分区</strong></li> <li><strong>type: join 类型</strong></li> <li><strong>possible_keys: 此次查询中可能选用的索引</strong></li> <li><strong>key: 此次查询中确切使用到的索引.</strong></li> <li><strong>ref: 哪个字段或常数与 key 一起被使用</strong></li> <li><strong>key_len：表示查询优化器使用了索引的字节数. 这个字段可以评估组合索引是否完全被使用, 或只有最左部分字段被使用到.</strong></li> <li><strong>rows: 显示此查询一共扫描了多少行. 这个是一个估计值.直观显示 SQL 的效率好坏, 原则上 rows 越少越好</strong></li> <li><strong>filtered: 表示此查询条件所过滤的数据的百分比</strong></li> <li><strong>extra: 额外的信息</strong></li></ul> <p>下面是几个重要字段</p> <h4 id="type"><a href="#type" class="header-anchor">#</a> type</h4> <p>type 字段比较重要, 它提供了判断查询是否高效的重要依据依据. 通过 type 字段, 我们判断此次查询是 全表扫描 还是 索引扫描 等.</p> <p>常见取值：</p> <ul><li><strong>const:</strong> 针对主键或唯一索引的等值查询扫描, 最多只返回一行数据. const 查询速度非常快, 因为它仅仅读取一次即可</li> <li><strong>eq_ref:</strong> 此类型通常出现在多表的 join 查询, 表示对于前表的每一个结果, 都只能匹配到后表的一行结果. 并且查询的比较操作通常是 =, 查询效率较高.</li> <li><strong>ref:</strong> 此类型通常出现在多表的 join 查询, 针对于非唯一或非主键索引, 或者是使用了 最左前缀 规则索引的查询.</li> <li><strong>range:</strong> 表示使用索引范围查询, 通过索引字段范围获取表中部分数据记录. 这个类型通常出现在 =, &lt;&gt;, &gt;, &gt;=, &lt;, &lt;=, IS NULL, &lt;=&gt;, BETWEEN, IN() 操作中.
+当 type 是 range 时, 那么 EXPLAIN 输出的 ref 字段为 NULL, 并且 key_len 字段是此次查询中使用到的索引的最长的那个.</li> <li><strong>index:</strong> 表示全索引扫描(full index scan), 和 ALL 类型类似, 只不过 ALL 类型是全表扫描, 而 index 类型则仅仅扫描所有的索引, 而不扫描数据.
+index 类型通常出现在: 所要查询的数据直接在索引树中就可以获取到, 而不需要扫描数据. 当是这种情况时, Extra 字段 会显示 Using index.</li> <li><strong>ALL:</strong> 表示全表扫描, 这个类型的查询是性能最差的查询之一. 通常来说, 我们的查询不应该出现 ALL 类型的查询, 因为这样的查询在数据量大的情况下, 对数据库的性能是巨大的灾难. 如一个查询是 ALL 类型查询, 那么一般来说可以对相应的字段添加索引来避免.</li></ul> <p>通常来说, 不同的 type 类型的<strong>性能关系</strong>如下:</p> <blockquote><blockquote><blockquote><p>ALL &lt; index &lt; range ~ index_merge &lt; ref &lt; eq_ref &lt; const &lt; system</p></blockquote></blockquote></blockquote> <h4 id="extra"><a href="#extra" class="header-anchor">#</a> Extra</h4> <p>EXplain 中的很多额外的信息会在 Extra 字段显示, 常见的有以下几种内容:</p> <ul><li>Using filesort</li></ul> <p>当 Extra 中有 Using filesort 时, 表示 MySQL 需额外的排序操作, 不能通过索引顺序达到排序效果. 一般有 Using filesort, 都建议优化去掉, 因为这样的查询 CPU 资源消耗大.</p> <ul><li>Using index</li></ul> <p>&quot;覆盖索引扫描&quot;, 表示查询在索引树中就可查找所需数据, 不用扫描表数据文件, 往往说明性能不错</p> <ul><li>Using temporary</li></ul> <p>查询有使用临时表, 一般出现于排序, 分组和多表 join 的情况, 查询效率不高, 建议优化.</p></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">3/16/2021, 11:36:30 AM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/posts/database/SQL_optimize.html#连接查询-联合查询-子查询" class="sidebar-link reco-side-连接查询-联合查询-子查询" data-v-70334359>连接查询 联合查询 子查询</a></li><li class="level-2" data-v-70334359><a href="/posts/database/SQL_optimize.html#explain-优化神器" class="sidebar-link reco-side-explain-优化神器" data-v-70334359>explain 优化神器</a></li><li class="level-3" data-v-70334359><a href="/posts/database/SQL_optimize.html#explain-输出格式" class="sidebar-link reco-side-explain-输出格式" data-v-70334359>EXPLAIN 输出格式</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.325c42ac.js" defer></script><script src="/assets/js/3.39380fd8.js" defer></script><script src="/assets/js/1.7eb61c6a.js" defer></script><script src="/assets/js/23.b88a619a.js" defer></script>
+  </body>
+</html>
