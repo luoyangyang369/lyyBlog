@@ -131,7 +131,7 @@ EXPOSE 80 443
 > 打包镜像
 ```docker
 docker build -f docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
-sudo docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
 ```
 
 > 服务器端编写 docker-compose.yml
@@ -140,10 +140,10 @@ version: '2'
 services:
   vuepress-starter:
     container_name: vuepress-starter
-    image: swr.cn-east-3.myhuaweicloud.com/huaweicloud-dreamhunter/vuepress-starter:latest
+    image: registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
     restart: always
     ports:
-      - '80:80'
+      - '88:80'
 ```
 
 > 启动, 冲

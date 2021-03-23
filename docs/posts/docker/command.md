@@ -20,7 +20,6 @@ sticky: 100  # 文章置顶
 ## 参考资料
 - [docker-compose 文档](http://www.dockerinfo.net/docker-compose-%E9%A1%B9%E7%9B%AE)
 
-
 ## docker 常用命令
 
 ```docker

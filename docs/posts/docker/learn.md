@@ -29,13 +29,10 @@ docker images
 docker image rm(rmi) 镜像ID
 ```
 
-
-## 容器(container) 容器是镜像的实例化
+## 容器(container) 
+> 容器是镜像的实例化
 ```docker
 docker ps(container ls)
     -a 全部
-
 docker stop/rm
 ```
-
-## 常用命令

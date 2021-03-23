@@ -20,7 +20,7 @@ module.exports = {
 		author: 'luoyangyang',
 		authorAvatar: '/img/header.jpeg',
 		// 备案
-		record: 'ICP 备案文案',  // ICP 备案文案
+		record: '陕ICP备2021003358号',  // ICP 备案文案
 		recordLink: 'ICP 备案指向链接', // ICP 备案指向链接
 		cyberSecurityRecord: '公安部备案文案',  // 公安部备案文案
 		cyberSecurityLink: '公安部备案指向链接',  // 公安部备案指向链接
