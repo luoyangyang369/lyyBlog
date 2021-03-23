@@ -1,5 +1,5 @@
 ---
-title: 学习重点
+title: 学习推荐
 date: 2019-1-16
 tags: [学习]
 index_img: /img/avatar.png
@@ -17,12 +17,8 @@ categories: 学习
 - [鸟哥的Linux私房菜2](http://cn.linux.vbird.org/)
 - [Linux就该这么学](https://www.linuxprobe.com/)
 - [Linux命令大全(手册)](https://www.linuxcool.com/)
-
-## 正在学习
-
-- [Linux系统结构详解](https://blog.csdn.net/hguisu/article/details/6122513)
-- [mvc](https://draveness.me/mvx#)
-
+- [CS-Notes](http://www.cyc2018.xyz/)
+- [Java工程师进阶知识](https://adjava.netlify.app/#/)
 
 ## 教程
 
@@ -30,6 +26,8 @@ categories: 学习
 - [Linux工具快速教程](https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html#)
 - [Linux](https://www.zhihu.com/question/23834032/answer/695582133)
 - [良许Linux](https://mp.weixin.qq.com/s?__biz=MzU3NTgyODQ1Nw==&mid=100001442&idx=1&sn=a55159ef053b3de9981392dfa3fbdc55&chksm=7d1c7e244a6bf732b3db64e1c6a8faadfc7b70220ab83594ffbec2c0b45de98876290bd15956&mpshare=1&scene=1&srcid=&sharer_sharetime=1574219162639&sharer_shareid=b10a18feaf6602ba28d0ac434169dfed#rd)
+- [Linux系统结构详解](https://blog.csdn.net/hguisu/article/details/6122513)
+- [mvc](https://draveness.me/mvx#)
 
 ## 书籍推荐
 
@@ -47,8 +45,3 @@ categories: 学习
 - 深入浅出MySQL(尤其是将)
 
 ### Python
-
-
-
-
-

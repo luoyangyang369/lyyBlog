@@ -18,6 +18,8 @@ external_link: true  # 在新标签中打开链接
 - [Java 到底是值传递还是引用传递？](https://www.zhihu.com/question/31203609)
 - [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
 - [Java 编程思想](https://wizardforcel.gitbooks.io/thinking-in-java/content/)
+- [Spring Boot 指南](https://snailclimb.gitee.io/springboot-guide/#/)
+- [Java工程师进阶知识](https://adjava.netlify.app/#/)
 
 ## 万物皆对象
 ### 方法
