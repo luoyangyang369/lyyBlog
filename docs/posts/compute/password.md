@@ -57,7 +57,3 @@ digest1 === digest2 // 验证是否相等
 
 ## 参考资料
 [数字签名](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
-
-
-
-

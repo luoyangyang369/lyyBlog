@@ -50,6 +50,12 @@ module.exports = {
 				text: '高级',
 				items: [
 					{
+						text: '博客',
+						items: [
+							{ text: 'vuepress', link: '/posts/vuepress/vuepress.md' },
+						]
+					},
+					{
 						text: 'Java',
 						items: [
 							{ text: '基础知识', link: '/posts/java/general' },

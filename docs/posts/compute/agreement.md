@@ -21,7 +21,7 @@ categories: 协议
 几种类型：
 
 1. application/x-www-form-urlencoded
-1)浏览器的原生form表单
+1) 浏览器的原生form表单
 2) 提交的数据按照 key1=val1&key2=val2 的方式进行编码, key和val都进行了URL转码
 2. multipart/form-data
 常见的 POST 数据提交的方式。我们使用表单上传文件时, 必须让 form 的 enctype 等于这个值。

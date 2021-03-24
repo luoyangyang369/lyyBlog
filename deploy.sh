@@ -23,3 +23,12 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
+
+# 部署流程
+yarn docs:build
+docker build -f docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
+docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+
+# 服务器执行
+docker pull registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+docker-compose down/up
