@@ -4,7 +4,7 @@ date: 2018-12-7 17:25:25
 tags: [Python]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-top: 9  # 设置权重，主页那个先显示
+top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
 categories: Python
 ---
@@ -28,7 +28,7 @@ categories: Python
 再选择下载至哪个目录下
 
 ### 配置下载源
-网上有很多可用的源，例如
+网上有很多可用的源, 例如
 
 豆瓣：http://pypi.douban.com/simple/
 清华：https://pypi.tuna.tsinghua.edu.cn/simple
@@ -39,13 +39,13 @@ categories: Python
 
 - 永久改变
 
-linux下，修改 ~/.pip/pip.conf (没有就创建一个)， 修改 index-url至tuna，内容如下：
+linux下, 修改 ~/.pip/pip.conf (没有就创建一个),  修改 index-url至tuna, 内容如下：
 ```
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-windows下，直接在user目录中创建一个pip目录，如：C:\Users\xx\pip，新建文件pip.ini，内容如下
+windows下, 直接在user目录中创建一个pip目录, 如：C:\Users\xx\pip, 新建文件pip.ini, 内容如下
 
 ```
 [global]
@@ -56,9 +56,9 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 > python -m ensurepip
 
-在管理员模式的控制台里输入上述命令后即可，python3.6用这个命令救活了
+在管理员模式的控制台里输入上述命令后即可, python3.6用这个命令救活了
 
-执行 pip install  --upgrade  pip后出现的问题，似乎是因为路径中有空格
+执行 pip install  --upgrade  pip后出现的问题, 似乎是因为路径中有空格
 
 正确的升级方式是  python -m pip install --upgrade pip
 
@@ -103,15 +103,15 @@ CTRY Y: 删除当前行
 
 简单介绍一下调试栏的几个重要的按钮作用：
 
-Resume Program：断点调试后，点击按钮，继续执行程序；
+Resume Program：断点调试后, 点击按钮, 继续执行程序；
 
-Step Over ：在单步执行时，在函数内遇到子函数时不会进入子函数内单步执行，而是将子函数整个执行完再停止，也就是把子函数整个作为一步。有一点,经过我们简单的调试,在不存在子函数的情况下是和Step Into效果一样的（简而言之，越过子函数，但子函数会执行）；
+Step Over ：在单步执行时, 在函数内遇到子函数时不会进入子函数内单步执行, 而是将子函数整个执行完再停止, 也就是把子函数整个作为一步。有一点,经过我们简单的调试,在不存在子函数的情况下是和Step Into效果一样的(简而言之, 越过子函数, 但子函数会执行)；
 
-Step Into：单步执行，遇到子函数就进入并且继续单步执行（简而言之，进入子函数）；
+Step Into：单步执行, 遇到子函数就进入并且继续单步执行(简而言之, 进入子函数)；
 
-Step Out ： 当单步执行到子函数内时，用step out就可以执行完子函数余下部分，并返回到上一层函数。
+Step Out ： 当单步执行到子函数内时, 用step out就可以执行完子函数余下部分, 并返回到上一层函数。
 
 ### 注意事项
 
-环境变量问题：每次打开新项目，记得勾选下面已存在的环境，不然默认创建环境
+环境变量问题：每次打开新项目, 记得勾选下面已存在的环境, 不然默认创建环境
 

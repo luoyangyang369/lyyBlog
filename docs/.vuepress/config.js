@@ -79,6 +79,7 @@ module.exports = {
 		lastUpdated: '上次更新',
 	},
 	plugins: [
+		['vuepress-plugin-code-copy', true],  // 代码块复制功能
 		// pwa 插件
 		['@vuepress/pwa', {
 			serviceWorker: true,

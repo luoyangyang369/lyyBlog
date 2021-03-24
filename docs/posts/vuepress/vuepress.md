@@ -8,7 +8,7 @@ categories: vuepress
 comments: true  # 开启文章的评论功能
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-top: 9  # 设置权重，主页那个先显示
+top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
@@ -87,7 +87,7 @@ sudo nano /etc/sudoers
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y
 ```
 
-> 安装 docker，后续的部署全部通过 [docker](https://developer.aliyun.com/article/110806)
+> 安装 docker, 后续的部署全部通过 [docker](https://developer.aliyun.com/article/110806)
 ```sh
 # step 1: 安装必要的一些系统工具
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common

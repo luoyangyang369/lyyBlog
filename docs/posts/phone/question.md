@@ -8,7 +8,7 @@ categories: 工具
 comments: true  # 开启文章的评论功能
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-top: 9  # 设置权重，主页那个先显示
+top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接

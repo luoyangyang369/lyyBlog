@@ -4,7 +4,7 @@ date: 2019-1-16
 tags: [学习]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-top: 10  # 设置权重，主页那个先显示
+top: 10  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
 categories: 学习
 ---
@@ -33,8 +33,8 @@ categories: 学习
 
 ### 操作系统
 - [鸟哥的Linux私房菜](https://linux.vbird.org/linux_basic/centos7/)
-- 深入理解计算机系统（第三版）
-- unix网络编程(比较难，后期看)
+- 深入理解计算机系统(第三版)
+- unix网络编程(比较难, 后期看)
 - Linux从入门到精通
 - Linux命令行大全
 - Linux就该这么学

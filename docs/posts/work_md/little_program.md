@@ -8,13 +8,13 @@ categories: 小程序
 # image: https://www.cnblogs.com/images/cnblogs_com/luoyangyang/1573981/t_index.jpg
 ---
 
-记录一次小程序开发，出现的坑以及一些知识
+记录一次小程序开发, 出现的坑以及一些知识
 <!-- more -->
 
 ## 基本概念
-- openID：不同APP不同openID。用户唯一标识，跟人一一对应，小程序分配给每个人的ID  OpenID = 用户微信号 & 公众平台APPID（两个数据加密得到的字符串）  不同公众号不同ID
+- openID：不同APP不同openID。用户唯一标识, 跟人一一对应, 小程序分配给每个人的ID  OpenID = 用户微信号 & 公众平台APPID(两个数据加密得到的字符串)  不同公众号不同ID
 
-- unionID：即使不同应用，ID一样。通过获取用户基本信息接口，开发者可通过OpenID来获取用户基本信息
+- unionID：即使不同应用, ID一样。通过获取用户基本信息接口, 开发者可通过OpenID来获取用户基本信息
 
 - appID(小程序ID):它其实就是小程序的「身份证号码」
 
@@ -34,8 +34,8 @@ categories: 小程序
 ## 问题记录
 
 - node没有原生的取POST请求体
-koa中可以利用 koa-body，如：router.post('/del_room', **koaBody()**, async (ctx)
-**但是**取xml koa-body不行，可以从原生的数据中读取
+koa中可以利用 koa-body, 如：router.post('/del_room', **koaBody()**, async (ctx)
+**但是**取xml koa-body不行, 可以从原生的数据中读取
 如：
 ```
 getPostData = function (ctx) {
