@@ -28,6 +28,7 @@ prev: ../interview/learn
 ==> casks 属于分类, 这种类型下载 brew install --cask 软件名
 其他类型直接下载
 brew tap 可以为 brew 的软件的跟踪,更新,安装添加更多的的tap formulae
+`brew cleanup --prune=all` 清理缓存
 
 #### 更新系统后 Python/git 失效
 报错信息: 

@@ -59,7 +59,7 @@ module.exports = {
 						text: 'Java',
 						items: [
 							{ text: '基础知识', link: '/posts/java/general' },
-							{ text: '快速学习', link: '/posts/java/general' }
+							{ text: 'spring', link: '/posts/java/spring' }
 						]
 					},
 					{

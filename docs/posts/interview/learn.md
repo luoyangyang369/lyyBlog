@@ -36,11 +36,14 @@ sticky: 1  # 文章置顶
 
 ## Java
 
+- [Java教程](http://c.biancheng.net/java/)
 - [Java工程师进阶知识](https://adjava.netlify.app/#/)
 - [Java 到底是值传递还是引用传递？](https://www.zhihu.com/question/31203609)
 - [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
 - [Java 编程思想](https://wizardforcel.gitbooks.io/thinking-in-java/content/)
 - [Spring Boot 指南](https://snailclimb.gitee.io/springboot-guide/#/)
+- [标准版的API规范](http://jdk8_api.dev.jcstaff.club/)
+- [注解和反射](https://www.bilibili.com/video/BV1p4411P7V3?p=1)
 
 ## 计算机概念
 
@@ -70,6 +73,9 @@ sticky: 1  # 文章置顶
 - [MySQL](https://juejin.im/post/5cb6c4ef51882532b70e6ff0)
 
 ## Python
+- [python3-codebook](https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)
+- [基础](https://funhacks.gitbooks.io/explore-python/content/)
+- [进阶](https://python3-cookbook.readthedocs.io/zh_CN/latest/) 
 
 ## node
 

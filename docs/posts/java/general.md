@@ -15,11 +15,14 @@ external_link: true  # 在新标签中打开链接
 <!-- [[toc]]  # 在页面显示目录 -->
 
 ## 参考资料
+
+- [Java教程](http://c.biancheng.net/java/)
 - [Java 到底是值传递还是引用传递？](https://www.zhihu.com/question/31203609)
 - [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
 - [Java 编程思想](https://wizardforcel.gitbooks.io/thinking-in-java/content/)
 - [Spring Boot 指南](https://snailclimb.gitee.io/springboot-guide/#/)
 - [Java工程师进阶知识](https://adjava.netlify.app/#/)
+- [标准版的API规范](http://jdk8_api.dev.jcstaff.club/)
 
 ## 万物皆对象
 ### 方法
@@ -33,15 +36,15 @@ external_link: true  # 在新标签中打开链接
 方法的返回类型表明了当你调用它时会返回的结果类型。参数列表则显示了可被传递到方法内部的参数类型及名称。方法名和参数列表统称为方法签名(signature of the method)。签名作为方法的唯一标识。
 
 #### Java 到底是值传递还是引用传递？
-java都是“值传递”即可,  关键看这个值是什, , 简单变量就是复制了具, 值, 引用变量就是复制了地址呗。字符串是不可变的
+java都是“值传递”即可,  关键看这个值是什么, 简单变量就是复制了具, 值, 引用变量就是复制了地址呗。字符串是不可变的
 
-## 关键字
+## 修饰符
+
+![修饰符](/img/xiushifu.png)
 
 关键字|用处|含义|备注
 :---|:--:|:---:|:---:
 void|方法前|函数无返回值|
-static|变量方法前|字段或方法不依赖于任何特定的对象实例|
-abstract|变量方法前|表明类或者成员方法具有抽象属性|
 
 ## 规范
 
@@ -87,8 +90,17 @@ class Tree {
 }
 ```
 
+### bean
+
+### 装饰器
+
+- @
+
 ## 垃圾回收
 - 标记-清扫
 
 "标记-清扫"所依据的思路仍然是从栈和静态存储区出发,  遍历所有的引, , 找出所有存活的对象。, 是, 每当找到一个存, 对象, 就给对象设, 个标记, 并不回收它。只有当标记, 程完成后, 清理动作才开始。, 清理过程中, 没有标记, 对象将被释放, 不会发生任何复制动作。"标记-清扫"后剩下的, 空间是不连续的, 垃圾回收器要是希, 得到连续空间的话, 就需要重新整理剩下的对象。
 
+## 类型强转
+
+List<Object> objBaseDataInfoFields = baseDataInfoFields.stream().map( it -> (Object)it).collect(Collectors.toList());
