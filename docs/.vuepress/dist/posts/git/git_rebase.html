@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git rebase | 罗洋洋的博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="">
+    <meta name="description" content="罗洋洋的博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.10342b57.css" as="style"><link rel="preload" href="/assets/js/app.03d293d4.js" as="script"><link rel="preload" href="/assets/js/3.5e4ac8fc.js" as="script"><link rel="preload" href="/assets/js/1.3c5103ae.js" as="script"><link rel="preload" href="/assets/js/29.dfe8c25c.js" as="script"><link rel="prefetch" href="/assets/js/10.f0aef37b.js"><link rel="prefetch" href="/assets/js/11.b60122bf.js"><link rel="prefetch" href="/assets/js/12.d30e45a0.js"><link rel="prefetch" href="/assets/js/13.7c7e6cf5.js"><link rel="prefetch" href="/assets/js/14.267294c3.js"><link rel="prefetch" href="/assets/js/15.e641a8bd.js"><link rel="prefetch" href="/assets/js/16.00a8fb2e.js"><link rel="prefetch" href="/assets/js/17.e36e1473.js"><link rel="prefetch" href="/assets/js/18.40d53704.js"><link rel="prefetch" href="/assets/js/19.36df5dd1.js"><link rel="prefetch" href="/assets/js/20.ae2b21c9.js"><link rel="prefetch" href="/assets/js/21.69432ec8.js"><link rel="prefetch" href="/assets/js/22.b0276337.js"><link rel="prefetch" href="/assets/js/23.ac5a78ed.js"><link rel="prefetch" href="/assets/js/24.1744a99d.js"><link rel="prefetch" href="/assets/js/25.1626d45c.js"><link rel="prefetch" href="/assets/js/26.537b71ec.js"><link rel="prefetch" href="/assets/js/27.7880cc0c.js"><link rel="prefetch" href="/assets/js/28.05db59a2.js"><link rel="prefetch" href="/assets/js/30.2da761f9.js"><link rel="prefetch" href="/assets/js/31.4ed043e6.js"><link rel="prefetch" href="/assets/js/32.e75482c7.js"><link rel="prefetch" href="/assets/js/33.4fcf775e.js"><link rel="prefetch" href="/assets/js/34.0057f447.js"><link rel="prefetch" href="/assets/js/35.2d7a48bc.js"><link rel="prefetch" href="/assets/js/36.e9fbb5ec.js"><link rel="prefetch" href="/assets/js/37.85a54d67.js"><link rel="prefetch" href="/assets/js/38.8048680d.js"><link rel="prefetch" href="/assets/js/39.4c68fec0.js"><link rel="prefetch" href="/assets/js/4.4c1c221d.js"><link rel="prefetch" href="/assets/js/40.157a8a41.js"><link rel="prefetch" href="/assets/js/41.3d5a41fa.js"><link rel="prefetch" href="/assets/js/42.559db6ed.js"><link rel="prefetch" href="/assets/js/43.93077947.js"><link rel="prefetch" href="/assets/js/44.75d70487.js"><link rel="prefetch" href="/assets/js/45.f31839fe.js"><link rel="prefetch" href="/assets/js/46.62afbb85.js"><link rel="prefetch" href="/assets/js/47.07b1cc99.js"><link rel="prefetch" href="/assets/js/48.9abc5759.js"><link rel="prefetch" href="/assets/js/49.a8773080.js"><link rel="prefetch" href="/assets/js/5.ce210c74.js"><link rel="prefetch" href="/assets/js/50.a3edc6ed.js"><link rel="prefetch" href="/assets/js/51.98d7adfc.js"><link rel="prefetch" href="/assets/js/52.7908974d.js"><link rel="prefetch" href="/assets/js/53.663db162.js"><link rel="prefetch" href="/assets/js/54.ec77c44a.js"><link rel="prefetch" href="/assets/js/55.b4eb3921.js"><link rel="prefetch" href="/assets/js/56.086f84ab.js"><link rel="prefetch" href="/assets/js/57.652f6845.js"><link rel="prefetch" href="/assets/js/58.481d6a5f.js"><link rel="prefetch" href="/assets/js/59.e411abce.js"><link rel="prefetch" href="/assets/js/6.794ba8eb.js"><link rel="prefetch" href="/assets/js/60.ce14162d.js"><link rel="prefetch" href="/assets/js/7.bb4a6ee8.js"><link rel="prefetch" href="/assets/js/8.8e2372e3.js"><link rel="prefetch" href="/assets/js/9.ecb33a99.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.10342b57.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>罗洋洋的博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc>罗洋洋的博客</p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>luoyangyang</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">罗洋洋的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/bash/" class="nav-link"><i class="undefined"></i>
+  bash
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/计算机/" class="nav-link"><i class="undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/categories/协议/" class="nav-link"><i class="undefined"></i>
+  协议
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/密码学/" class="nav-link"><i class="undefined"></i>
+  密码学
+</a></li><li class="dropdown-item"><!----> <a href="/categories/MySQL/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mac/" class="nav-link"><i class="undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/多媒体/" class="nav-link"><i class="undefined"></i>
+  多媒体
+</a></li><li class="dropdown-item"><!----> <a href="/categories/odoo/" class="nav-link"><i class="undefined"></i>
+  odoo
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据结构/" class="nav-link"><i class="undefined"></i>
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hexo/" class="nav-link"><i class="undefined"></i>
+  hexo
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/问题/" class="nav-link"><i class="undefined"></i>
+  问题
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  归档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      高级
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/vuepress/vuepress.html" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li></ul></li><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/java/general.html" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-subitem"><a href="/posts/java/spring.html" class="nav-link"><i class="undefined"></i>
+  spring
+</a></li></ul></li><li class="dropdown-item"><h4>面试</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/interview/interview.html" class="nav-link"><i class="undefined"></i>
+  面试题
+</a></li><li class="dropdown-subitem"><a href="/posts/interview/learn.html" class="nav-link"><i class="undefined"></i>
+  学习资料
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luoyangyang369" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="/img/header.jpeg" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    luoyangyang
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>49</h3> <h6 data-v-828910c6>Articles</h6></div> <div data-v-828910c6><h3 data-v-828910c6>34</h3> <h6 data-v-828910c6>Tags</h6></div></div> <ul class="social-links" data-v-828910c6><li class="social-item" data-v-828910c6><i class="iconfont reco-github" style="color:#fb9b5f;" data-v-828910c6></i></li><li class="social-item" data-v-828910c6><i class="iconfont reco-sf" style="color:#e15b64;" data-v-828910c6></i></li></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/bash/" class="nav-link"><i class="undefined"></i>
+  bash
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Linux/" class="nav-link"><i class="undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/计算机/" class="nav-link"><i class="undefined"></i>
+  计算机
+</a></li><li class="dropdown-item"><!----> <a href="/categories/协议/" class="nav-link"><i class="undefined"></i>
+  协议
+</a></li><li class="dropdown-item"><!----> <a href="/categories/设计模式/" class="nav-link"><i class="undefined"></i>
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/categories/密码学/" class="nav-link"><i class="undefined"></i>
+  密码学
+</a></li><li class="dropdown-item"><!----> <a href="/categories/MySQL/" class="nav-link"><i class="undefined"></i>
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/categories/docker/" class="nav-link"><i class="undefined"></i>
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/categories/git/" class="nav-link"><i class="undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习/" class="nav-link"><i class="undefined"></i>
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/categories/面试/" class="nav-link"><i class="undefined"></i>
+  面试
+</a></li><li class="dropdown-item"><!----> <a href="/categories/java/" class="nav-link"><i class="undefined"></i>
+  java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Java/" class="nav-link"><i class="undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/categories/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Mac/" class="nav-link"><i class="undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node/" class="nav-link"><i class="undefined"></i>
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/categories/多媒体/" class="nav-link"><i class="undefined"></i>
+  多媒体
+</a></li><li class="dropdown-item"><!----> <a href="/categories/odoo/" class="nav-link"><i class="undefined"></i>
+  odoo
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Python/" class="nav-link"><i class="undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/数据结构/" class="nav-link"><i class="undefined"></i>
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/categories/算法/" class="nav-link"><i class="undefined"></i>
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/categories/hexo/" class="nav-link"><i class="undefined"></i>
+  hexo
+</a></li><li class="dropdown-item"><!----> <a href="/categories/小程序/" class="nav-link"><i class="undefined"></i>
+  小程序
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vuepress/" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/categories/问题/" class="nav-link"><i class="undefined"></i>
+  问题
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  归档
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      高级
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>博客</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/vuepress/vuepress.html" class="nav-link"><i class="undefined"></i>
+  vuepress
+</a></li></ul></li><li class="dropdown-item"><h4>Java</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/java/general.html" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-subitem"><a href="/posts/java/spring.html" class="nav-link"><i class="undefined"></i>
+  spring
+</a></li></ul></li><li class="dropdown-item"><h4>面试</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/interview/interview.html" class="nav-link"><i class="undefined"></i>
+  面试题
+</a></li><li class="dropdown-subitem"><a href="/posts/interview/learn.html" class="nav-link"><i class="undefined"></i>
+  学习资料
+</a></li></ul></li></ul></div></div> <a href="https://github.com/luoyangyang369" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>git rebase</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>luoyangyang</span>
+            
+          <span data-v-4e82dffc>2018 - </span>
+          2021
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">git rebase</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>luoyangyang</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>3/16/2021</span></i> <i class="iconfont reco-eye" data-v-1ff7123e><span id="/posts/git/git_rebase.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-1ff7123e><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>git</span></i></div></div> <div class="theme-reco-content content__default"><p>git在工作中正确的使用方式----git rebase篇
+</p> <ul><li><a href="https://blog.csdn.net/nrsc272420199/article/details/85555911" target="_blank" rel="noopener noreferrer">git rebase<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.jianshu.com/p/4a8f4af4e803" target="_blank" rel="noopener noreferrer">rebase 用法小结<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://zhuanlan.zhihu.com/p/73767731" target="_blank" rel="noopener noreferrer">git rebase VS git merge？ 更优雅的 git 合并方式值得拥有<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <p>git rebase master----&gt;解决冲突---&gt;git rebase --continue</p> <h2 id="本地开发分支可以灵活管理"><a href="#本地开发分支可以灵活管理" class="header-anchor">#</a> 本地开发分支可以灵活管理</h2> <div class="language-git line-numbers-mode"><pre class="language-git"><code>git checkout master
+git pull
+git checkout local
+git rebase -i HEAD~2  //合并提交 --- 2表示合并两个
+git rebase master----&gt;解决冲突---&gt;git rebase --continue
+git checkout master
+git merge local
+git push
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><div class="language-git line-numbers-mode"><pre class="language-git"><code>git checkout 13.0
+git pull
+git checkout studio-dev-lyy
+<span class="token comment"># 切换到 studio-dev-lyy 分支后， 就是修改代码</span>
+<span class="token comment"># 修改完了， 就正常提交代码 ------- git commit</span>
+<span class="token comment"># 如果有多次 studio-dev-lyy 分支的提交，就合并，只有一次可以不合并</span>
+git rebase -i HEAD~2  // 合并提交 --- 2表示合并两个
+
+<span class="token comment"># 将 13.0 内容合并到 studio-dev-lyy</span>
+git rebase 13.0----&gt;解决冲突---&gt;git rebase --continue
+<span class="token comment"># 再起切换到 13.0 或其他目标分支</span>
+git checkout 13.0
+<span class="token comment"># 将 studio-dev-lyy 合并到 13.0</span>
+git merge studio-dev-lyy
+<span class="token comment"># 推送到远程仓库</span>
+git push
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">5/24/2021, 10:17:13 AM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/posts/git/git_rebase.html#本地开发分支可以灵活管理" class="sidebar-link reco-side-本地开发分支可以灵活管理" data-v-70334359>本地开发分支可以灵活管理</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.03d293d4.js" defer></script><script src="/assets/js/3.5e4ac8fc.js" defer></script><script src="/assets/js/1.3c5103ae.js" defer></script><script src="/assets/js/29.dfe8c25c.js" defer></script>
+  </body>
+</html>
