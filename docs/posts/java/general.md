@@ -16,6 +16,7 @@ external_link: true  # 在新标签中打开链接
 
 ## 参考资料
 
+http://debuggg.com/article/147
 - [Java教程](http://c.biancheng.net/java/)
 - [Java 到底是值传递还是引用传递？](https://www.zhihu.com/question/31203609)
 - [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
@@ -66,8 +67,26 @@ java hello
 - 布尔表达式 ? 值 1 : 值 2
 若表达式计算为 true,  则返回结果 值 1 ；如果表达式的计算为 fals, , 则返回结果 值 2。
 
+## 重写与重载
+### 重写（Override）
+
+存在于继承体系中，指子类实现了一个与父类在方法声明上完全相同的一个方法。
+
+为了满足里式替换原则，重写有以下三个限制：
+
+- 子类方法的访问权限必须大于等于父类方法；
+- 子类方法的返回类型必须是父类方法返回类型或为其子类型。
+- 子类方法抛出的异常类型必须是父类抛出异常类型或为其子类型。
+
+使用 `@Override` 注解，可以让编译器帮忙检查是否满足上面的三个限制条件。
+
 ### 重载
 > 每个被重载的方法必须有独一无二的参数列表
+
+存在于同一个类中，指一个方法与已经存在的方法名称上相同，但是`参数类型、个数、顺序`至少有一个不同。
+
+应该注意的是，`返回值不同，其它都相同不算是重载。`
+
 ```java
 // housekeeping/Overloading.java
 // Both constructor and ordinary method overloading

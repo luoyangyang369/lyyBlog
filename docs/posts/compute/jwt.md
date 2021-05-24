@@ -26,10 +26,13 @@ prev: ../interview/learn
 ## 参考资料
 - [使用JWT实现单点登录](https://blog.csdn.net/weixin_42873937/article/details/82460997)
 - [理解OAuth 2.0](https://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+- [什么是单点登录(SSO)](https://mp.weixin.qq.com/s/drPVkRbCsDIlX6Ls2pDmqA)
 
 ## 单点登录
-比如:
-在微信里登录公众号或者小程序, 直接授权即可登录
+
+单点登录就是在多个系统中，用户只需一次登录，各个系统即可感知该用户已经登录
+
+`如: 在微信里登录公众号或者小程序, 直接授权即可登录`
 
 ## JWT
 JWT是一个含签名并携带用户相关信息的加密串, 页面请求校验登录接口时, 请求头中携带JWT串到后端服务, 后端通过签名加密串匹配校验, 保证信息未被篡改。 校验通过则认为是可靠的请求, 将正常返回数据。 

@@ -16,9 +16,11 @@ sticky: 1  # 文章置顶
 ## 学习推荐网站
 
 - [hellogithub](https://hellogithub.com/)
+- [免费的编程中文书籍索引](https://github.com/justjavac/free-programming-books-zh_CN)
 
 ## 面试
 
+- [面试题](https://github.com/souyunku/DevBooks)
 - [2021年最新总结](https://github.com/0voice/interview_internal_reference)
 - [如何准备编程面试](https://yangshun.github.io/tech-interview-handbook/coding-round-overview)
 - [面试备忘录](https://yangshun.github.io/tech-interview-handbook/cheatsheet) (涉及面试前需要准备的问题, 收到面试题的考虑方式、编程测试准备流程、面试总结)
@@ -29,21 +31,33 @@ sticky: 1  # 文章置顶
 - [做简历注意事项, 让你的简历更能引起面试官注意](https://yangshun.github.io/tech-interview-handbook/resume)
 - [面试题](http://www.cjjjs.com/page/topicinfo?id_topic=63)
 - [饿了么面试](https://elemefe.github.io/node-interview/#/sections/zh-cn/)
+- [JavaGuide面试突击版](https://snailclimb.gitee.io/javaguide-interview/#/)
 
 ## 总结
 
 - [CS-Notes](http://www.cyc2018.xyz/)
+- [JavaGuide](https://github.com/Snailclimb/JavaGuide)
+- [AobingJava](https://github.com/AobingJava/JavaFamily)
+- [bugstack](https://bugstack.cn/)
+- [advanced-java](https://github.com/doocs/advanced-java)
+- [spring-analysis](https://github.com/seaswalker/spring-analysis)
+- [日拱一兵](https://dayarch.top/)
+- [美团技术团队](https://tech.meituan.com/)
 
 ## Java
 
+- [Java工程师成神之路](http://hollischuang.gitee.io/tobetopjavaer/#/)
+- [javaGuide](https://snailclimb.gitee.io/javaguide/#/)
+- [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
 - [Java教程](http://c.biancheng.net/java/)
+- [PassJava 学习教程](http://www.passjava.cn/#/)
 - [Java工程师进阶知识](https://adjava.netlify.app/#/)
 - [Java 到底是值传递还是引用传递？](https://www.zhihu.com/question/31203609)
-- [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
 - [Java 编程思想](https://wizardforcel.gitbooks.io/thinking-in-java/content/)
 - [Spring Boot 指南](https://snailclimb.gitee.io/springboot-guide/#/)
 - [标准版的API规范](http://jdk8_api.dev.jcstaff.club/)
 - [注解和反射](https://www.bilibili.com/video/BV1p4411P7V3?p=1)
+- [java相关](https://github.com/rbmonster/learning-note)
 
 ## 计算机概念
 
@@ -64,9 +78,9 @@ sticky: 1  # 文章置顶
 
 ## MySQL
 
+- [MySQL存储引擎－－MyISAM与InnoDB区别](https://blog.csdn.net/xifeijian/article/details/20316775)
+- [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 - [MySQL总览图](https://static001.geekbang.org/resource/image/0d/d9/0d2070e8f84c4801adbfa03bda1f98d9.png)
-- [MySQL Windows安装](https://blog.csdn.net/qq_41307443/article/details/79839558)
-- [MySQL安装问题](https://www.cnblogs.com/RayWang/p/9347874.html)
 - [MySQL explain详解](https://segmentfault.com/a/1190000008131735)
 - [MySQL相关知识](https://cyc2018.github.io/CS-Notes/#/notes/MySQL)
 - [SQL优化方案](https://mp.weixin.qq.com/s/YMxLYbVuF_7rfaawp8flOA)
@@ -75,7 +89,8 @@ sticky: 1  # 文章置顶
 ## Python
 - [python3-codebook](https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)
 - [基础](https://funhacks.gitbooks.io/explore-python/content/)
-- [进阶](https://python3-cookbook.readthedocs.io/zh_CN/latest/) 
+- [进阶](https://python3-cookbook.readthedocs.io/zh_CN/latest/)
+- [faskapi](https://fastapi.tiangolo.com/zh/)
 
 ## node
 
@@ -85,7 +100,6 @@ sticky: 1  # 文章置顶
 ## 算法
 
 - [算法小贴士](https://yangshun.github.io/tech-interview-handbook/algorithms/algorithms-introduction) (各类算法小贴士, 以及按主题分类过的最容易考到的问题)
-
 
 ## docker
 
