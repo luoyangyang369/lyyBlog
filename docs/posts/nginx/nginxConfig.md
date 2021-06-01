@@ -43,11 +43,11 @@ events {
     # 即 max_clients = worker_processes * worker_connections
     # 在设置了反向代理的情况下, max_clients = worker_processes * worker_connections / 4  为什么
     # 为什么上面反向代理要除以4, 应该说是一个经验值
-    # 根据以上条件, 正常情况下的Nginx Server可以应付的最大连接数为：4 * 8000 = 32000
+    # 根据以上条件, 正常情况下的Nginx Server可以应付的最大连接数为:4 * 8000 = 32000
     # worker_connections 值的设置跟物理内存大小有关
     # 因为并发受IO约束, max_clients的值须小于系统可以打开的最大文件数
     # 而系统可以打开的最大文件数和内存大小成正比, 一般1GB内存的机器上可以打开的文件数大约是10万左右
-    # 我们来看看360M内存的VPS可以打开的文件句柄数是多少：
+    # 我们来看看360M内存的VPS可以打开的文件句柄数是多少:
     # $ cat /proc/sys/fs/file-max
     # 输出 34336
     # 32000 < 34336, 即并发连接总数小于系统可以打开的文件句柄总数, 这样就在操作系统可以承受的范围之内
@@ -173,7 +173,7 @@ events
     ############################################################################
     #单个后台 worker process 进程的最大并发链接数
     #事件模块指令, 定义 nginx 每个进程最大连接数, 默认 1024。最大客户连接数由 worker_processes 和 worker_connections 决定
-    #即 max_client=worker_processes*worker_connections, 在作为反向代理时：max_client=worker_processes*worker_connections / 4
+    #即 max_client=worker_processes*worker_connections, 在作为反向代理时:max_client=worker_processes*worker_connections / 4
     worker_connections 65535;
     ############################################################################
 }
@@ -188,7 +188,7 @@ http {
     client_header_buffer_size 32k; #上传文件大小限制
     large_client_header_buffers 4 64k; #设定请求缓
     client_max_body_size 8m; #设定请求缓
-    sendfile on; #开启高效文件传输模式, sendfile 指令指定 nginx 是否调用 sendfile 函数来输出文件, 对于普通应用设为 on, 如果用来进行下载等应用磁盘 IO 重负载应用, 可设置为 off, 以平衡磁盘与网络 I/O 处理速度, 降低系统的负载。注意：如果图片显示不正常把这个改成 off。
+    sendfile on; #开启高效文件传输模式, sendfile 指令指定 nginx 是否调用 sendfile 函数来输出文件, 对于普通应用设为 on, 如果用来进行下载等应用磁盘 IO 重负载应用, 可设置为 off, 以平衡磁盘与网络 I/O 处理速度, 降低系统的负载。注意:如果图片显示不正常把这个改成 off。
     autoindex on; #开启目录列表访问, 合适下载服务器, 默认关闭。
     tcp_nopush on; #防止网络阻塞
     tcp_nodelay on; #防止网络阻塞
@@ -201,7 +201,7 @@ http {
     send_timeout 10;                 #客户端响应超时时间, 在两次客户端读取操作之间。如果在这段时间内, 客户端没有读取任何数据, nginx 就会关闭连接
     ################################
 
-    #FastCGI 相关参数是为了改善网站的性能：减少资源占用, 提高访问速度。下面参数看字面意思都能理解。
+    #FastCGI 相关参数是为了改善网站的性能:减少资源占用, 提高访问速度。下面参数看字面意思都能理解。
     fastcgi_connect_timeout 300;
     fastcgi_send_timeout 300;
     fastcgi_read_timeout 300;
@@ -224,7 +224,7 @@ http {
     gzip_min_length 1k; #最小压缩文件大小
     gzip_buffers 4 16k; #压缩缓冲区
     gzip_http_version 1.0; #压缩版本(默认 1.1, 前端如果是 squid2.5 请使用 1.0)
-    gzip_comp_level 2; #压缩等级, gzip 压缩比, 1 为最小, 处理最快；9 为压缩比最大, 处理最慢, 传输速度最快, 也最消耗 CPU；
+    gzip_comp_level 2; #压缩等级, gzip 压缩比, 1 为最小, 处理最快;9 为压缩比最大, 处理最慢, 传输速度最快, 也最消耗 CPU;
     gzip_types text/plain application/x-javascript text/css application/xml;
     #压缩类型, 默认就已经包含 text/html, 所以下面就不用再写了, 写上去也不会有问题, 但是会有一个 warn。
     gzip_vary on;

@@ -11,10 +11,10 @@ categories: 问题
 
 <!-- more -->
 
-URL特殊字符转译问题：
+URL特殊字符转译问题:
 在拼接url的时候, 需将特殊字符转译, [参考](https://blog.csdn.net/p312011150/article/details/78928003)
 
-提取图片里的文字：可以使用OCR 光学字符识别(英語：Optical Character Recognition)
+提取图片里的文字:可以使用OCR 光学字符识别(英語:Optical Character Recognition)
 
 一定不要相信前端传来的东西, 都需要进行校验
 

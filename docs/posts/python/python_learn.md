@@ -18,9 +18,9 @@ categories: Python
 
 - __name__: 
 
-通俗的理解__name__ == '__main__'：假如你叫小明.py, 在朋友眼中, 你是小明(__name__ == '小明')；在你自己眼中, 你是你自己(__name__ == '__main__')。
+通俗的理解__name__ == '__main__':假如你叫小明.py, 在朋友眼中, 你是小明(__name__ == '小明');在你自己眼中, 你是你自己(__name__ == '__main__')。
 
-if __name__ == '__main__'的意思是：当.py文件被直接运行时, if __name__ == '__main__'之下的代码块将被运行；当.py文件以模块形式被导入时, if __name__ == '__main__'之下的代码块不被运行。
+if __name__ == '__main__'的意思是:当.py文件被直接运行时, if __name__ == '__main__'之下的代码块将被运行;当.py文件以模块形式被导入时, if __name__ == '__main__'之下的代码块不被运行。
 
 被运行的时候, __name__是__main__;  当作为模块导入的时候为 当前文件名称
 
@@ -28,14 +28,14 @@ if __name__ == '__main__'的意思是：当.py文件被直接运行时, if __nam
 
 在开发一个程序时候, 与其让它运行时崩溃, 不如在它出现错误条件时就崩溃(返回错误)。这时候断言assert 就显得非常有用。
 
-assert的语法格式：  assert expression
+assert的语法格式:  assert expression
 
-它的等价语句为：
+它的等价语句为:
 
 if not expression:
     raise AssertionError
 
-也可为assert添加异常参数, 其实就是在断言表达式后添加字符串信息, 用来解释断言并更好的知道是哪里出了问题。格式如下：
+也可为assert添加异常参数, 其实就是在断言表达式后添加字符串信息, 用来解释断言并更好的知道是哪里出了问题。格式如下:
 
 assert expression [, arguments]
 

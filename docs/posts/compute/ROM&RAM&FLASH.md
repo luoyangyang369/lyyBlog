@@ -11,7 +11,7 @@ categories: 计算机
 
 初学MCU的人, 经常会看到ROM, RAM, FLASH, 而且会被这些词汇搞得晕头转向。本文对这些概念进行了厘清, 并介绍了这些Memory的区别
 
-**备注**：MCU-单片机, 微型计算机
+**备注**:MCU-单片机, 微型计算机
 <!-- more -->
 
 ## ROM (Read Only Memory)程序存储器

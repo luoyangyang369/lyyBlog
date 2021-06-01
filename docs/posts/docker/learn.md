@@ -18,7 +18,7 @@ docker 知识总结
 <!-- more -->
 
 ## 参考资料
-- [Docker的三大核心组件：镜像、容器与仓库](http://dockone.io/article/9249)
+- [Docker的三大核心组件:镜像、容器与仓库](http://dockone.io/article/9249)
 - [Docker — 从入门到实践](https://vuepress.mirror.docker-practice.com/)
 
 ![docker](/img/docker1.png)

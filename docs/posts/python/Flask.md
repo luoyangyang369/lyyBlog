@@ -24,7 +24,7 @@ def hello():
 if __name__ == "__main__":  // 确保服务器只会在使用 Python 解释器运行代码的 情况下运行, 而不会在作为模块导入时运行
     app.run()  //  run() 函数来运行本地服务器和我们的应用
 ```
-运行： python hello.py
+运行: python hello.py
 
 ## 小知识
 
@@ -32,8 +32,8 @@ if __name__ == "__main__":  // 确保服务器只会在使用 Python 解释器�
 
 Flask提供了两种上下文, 一种是应用上下文(Application Context), 一种是请求上下文(Request Context)。
 
-- application 指的就是当你调用app = Flask(name)创建的这个对象app；
-- request 指的是每次http请求发生时, WSGI server(比如gunicorn)调Flask.call()之后, 在Flask对象内部创建的Request对象；
+- application 指的就是当你调用app = Flask(name)创建的这个对象app;
+- request 指的是每次http请求发生时, WSGI server(比如gunicorn)调Flask.call()之后, 在Flask对象内部创建的Request对象;
 - application 表示用于响应WSGI请求的应用本身, request 表示每次http请求;
 - application的生命周期大于request, 一个application存活期间, 可能发生多次http请求, 所以, 也就会有多个request
 
@@ -50,18 +50,18 @@ Flask通过_RequestContext将App与Request关联起来
 - request 获取请求对象
 - g 是一个特殊对象, 独立于每一个请求。在处理请求过程中, 它可以用于储存 可能多个函数都会用到的数据。
 
-    如：把连接储存于其中, 可以多次使用, 而不用在同一个 请求中每次调用 get_db 时都创建一个新的连接。
+    如:把连接储存于其中, 可以多次使用, 而不用在同一个 请求中每次调用 get_db 时都创建一个新的连接。
 - current_app 是另一个特殊对象, 该对象指向处理请求的 Flask 应用。这里 使用了应用工厂, 那么在其余的代码中就不会出现应用对象。
 
 当应用创建后, 在处理 一个请求时,  get_db 会被调用。这样就需要使用 current_app 。
 
 
 ### 一句话
-flask在使用session 时要设置一个密钥 app.secret_key  如：app.secret_key = '123456'  一般使用os.urandom(16) 生成
+flask在使用session 时要设置一个密钥 app.secret_key  如:app.secret_key = '123456'  一般使用os.urandom(16) 生成
 
 ### jsonify && json.dumps
 
-区别：
+区别:
 1. Content-Type有区别
 
 jsonify时响应的Content-Type字段值为application/json, 而使用json.dumps时该字段值为text/html。
@@ -87,7 +87,7 @@ Flask 中的蓝图为这些情况设计:
 
 反转函数url_for与重定向redirect
 
-url_for, 简单来说, 这个函数接受视图函数的名字(字符串形式)作为参数, 返回视图函数对应的url, 例如：
+url_for, 简单来说, 这个函数接受视图函数的名字(字符串形式)作为参数, 返回视图函数对应的url, 例如:
 ```
 @app.route('/')
 def hello_world():
@@ -98,7 +98,7 @@ def hello_world():
 def index():
     return 'index'
 ```
-redirect则更简单, 功能就是跳转到指定的url, 大部分情况下, 我们都是和url_for一起使用的, 例如：
+redirect则更简单, 功能就是跳转到指定的url, 大部分情况下, 我们都是和url_for一起使用的, 例如:
 ```
 @app.route('/')
 def hello_world():

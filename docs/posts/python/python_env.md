@@ -30,8 +30,8 @@ categories: Python
 ### 配置下载源
 网上有很多可用的源, 例如
 
-豆瓣：http://pypi.douban.com/simple/
-清华：https://pypi.tuna.tsinghua.edu.cn/simple
+豆瓣:http://pypi.douban.com/simple/
+清华:https://pypi.tuna.tsinghua.edu.cn/simple
 
 - 临时下载
 
@@ -39,13 +39,13 @@ categories: Python
 
 - 永久改变
 
-linux下, 修改 ~/.pip/pip.conf (没有就创建一个),  修改 index-url至tuna, 内容如下：
+linux下, 修改 ~/.pip/pip.conf (没有就创建一个),  修改 index-url至tuna, 内容如下:
 ```
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-windows下, 直接在user目录中创建一个pip目录, 如：C:\Users\xx\pip, 新建文件pip.ini, 内容如下
+windows下, 直接在user目录中创建一个pip目录, 如:C:\Users\xx\pip, 新建文件pip.ini, 内容如下
 
 ```
 [global]
@@ -65,10 +65,10 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ### 虚拟环境搭建
 
 pip install virtualenv
-一般需要安装一个管理工具：pip install virtualenvwrapper-win　　只有它可以使用workon
-创建虚拟环境：mkvirtualenv test1
-退出：deactivate
-删除：rmvirtualenv venv
+一般需要安装一个管理工具:pip install virtualenvwrapper-win　　只有它可以使用workon
+创建虚拟环境:mkvirtualenv test1
+退出:deactivate
+删除:rmvirtualenv venv
 
 ## pycharm
 [参考](https://zhuanlan.zhihu.com/p/26066151)
@@ -79,9 +79,9 @@ pip install virtualenv
 ### 常用设置
 
 View --> Toolbar  显示导航栏
-设置皮肤： File -> Settings -> IDE Settings -> Appearance -> Theme -> 选择“Alloy.IDEA Theme”
-设置脚本头文件---自动生成头文件：File-->Settings-->Editor-->Code Style-->File and Code Templates ,然后选择Python Script 。填写在旁边框框中填写头文件信息即可。
-取消自动保存： 
+设置皮肤: File -> Settings -> IDE Settings -> Appearance -> Theme -> 选择“Alloy.IDEA Theme”
+设置脚本头文件---自动生成头文件:File-->Settings-->Editor-->Code Style-->File and Code Templates ,然后选择Python Script 。填写在旁边框框中填写头文件信息即可。
+取消自动保存: 
 ```
 去掉 Setting - General - Synchronization - Save files on frame deactivation 以及 Save files automatically if application is idle for XX sec的勾
 菜单File -> Settings... -> Editor -> General -> Editor Tabs
@@ -90,28 +90,28 @@ View --> Toolbar  显示导航栏
 ```
 ### 快捷键
 
-双击 shift： 全局查找
-shift + enter： 另起一行
+双击 shift: 全局查找
+shift + enter: 另起一行
 Ctrl + alt + l   调整代码格式
 Ctrl + d:  复制一行至下一行
-Ctrl + shift + 上下：  移动行
+Ctrl + shift + 上下:  移动行
 CTRL SHIFT -: 折叠所有代码
 CTRL SHIFT +: 展开所有代码
 CTRY Y: 删除当前行
 
 ### 调试
 
-简单介绍一下调试栏的几个重要的按钮作用：
+简单介绍一下调试栏的几个重要的按钮作用:
 
-Resume Program：断点调试后, 点击按钮, 继续执行程序；
+Resume Program:断点调试后, 点击按钮, 继续执行程序;
 
-Step Over ：在单步执行时, 在函数内遇到子函数时不会进入子函数内单步执行, 而是将子函数整个执行完再停止, 也就是把子函数整个作为一步。有一点,经过我们简单的调试,在不存在子函数的情况下是和Step Into效果一样的(简而言之, 越过子函数, 但子函数会执行)；
+Step Over :在单步执行时, 在函数内遇到子函数时不会进入子函数内单步执行, 而是将子函数整个执行完再停止, 也就是把子函数整个作为一步。有一点,经过我们简单的调试,在不存在子函数的情况下是和Step Into效果一样的(简而言之, 越过子函数, 但子函数会执行);
 
-Step Into：单步执行, 遇到子函数就进入并且继续单步执行(简而言之, 进入子函数)；
+Step Into:单步执行, 遇到子函数就进入并且继续单步执行(简而言之, 进入子函数);
 
-Step Out ： 当单步执行到子函数内时, 用step out就可以执行完子函数余下部分, 并返回到上一层函数。
+Step Out : 当单步执行到子函数内时, 用step out就可以执行完子函数余下部分, 并返回到上一层函数。
 
 ### 注意事项
 
-环境变量问题：每次打开新项目, 记得勾选下面已存在的环境, 不然默认创建环境
+环境变量问题:每次打开新项目, 记得勾选下面已存在的环境, 不然默认创建环境
 

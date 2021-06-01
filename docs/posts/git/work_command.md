@@ -35,7 +35,7 @@ git  工作常用命令
 
 在克隆过程中, 如果仓库是一个私有仓库, 将会要求用户输入 git 的账号和密码。按照提示输入即可。
 
-当然, 用户也可以通过配置本地的git配置信息, 执行git config命令预先配置好相关的用户信息, 配置执行如下：
+当然, 用户也可以通过配置本地的git配置信息, 执行git config命令预先配置好相关的用户信息, 配置执行如下:
 
 ```bash
 $ git config --global user.name "你的名字或昵称"
@@ -57,7 +57,7 @@ $ git init
 $ git remote add origin https://github.com/用户个性地址/helloWorld.git
 ```
 这样就完成了版本的一次初始化。
-接下去, 进入你已经初始化好的或者克隆仓库的目录,然后执行：
+接下去, 进入你已经初始化好的或者克隆仓库的目录,然后执行:
 
 `$ git pull origin master`
 修改/添加文件, 否则与原文件相比就没有变动。
@@ -84,10 +84,10 @@ $ git push origin dev_lyy(本地):dev_lyy(远程)  # 推送至远程分支, 没�
 当master领先自己本地一个分支时, 即其他同事合并了代码, 而我本地也做了修改
 git:(dev) git rebase master
 
-git 所做操作：首先, git 会把 dev 分支里面的每个 commit 取消掉；
-其次, 把上面的操作临时保存成 patch 文件, 存在 .git/rebase 目录下；
-然后, 把 dev 分支更新到最新的 master 分支；
-最后, 把上面保存的 patch 文件应用到 dev 分支上；
+git 所做操作:首先, git 会把 dev 分支里面的每个 commit 取消掉;
+其次, 把上面的操作临时保存成 patch 文件, 存在 .git/rebase 目录下;
+然后, 把 dev 分支更新到最新的 master 分支;
+最后, 把上面保存的 patch 文件应用到 dev 分支上;
 
 **提醒**
 ```
@@ -102,10 +102,10 @@ git rebase —abort
 ### 基本知识
 
 Git 使用 SHA-1 算法计算数据的校验和, 通过对文件的内容或目录的结构计算出一个 SHA-1哈希值, 作为指纹字符串。
-该字串由 40个十六进制字符(0-9及 a-f)组成, 看起来就像是：24b9da6552252987aa493b52f8696cd6d3b00373
+该字串由 40个十六进制字符(0-9及 a-f)组成, 看起来就像是:24b9da6552252987aa493b52f8696cd6d3b00373
 Git 的工作完全依赖于这类指纹字串, 所以你会经常看到这样的哈希值。实际上, 所有保存在 Git数据库中的东西都是用此哈希值来作索引的, 而不是靠文件名。
 
-Git 管理项目时, 文件流转的三个工作区域： 
+Git 管理项目时, 文件流转的三个工作区域: 
 - Git 的工作目录
 - 暂存区域
 - 以及本地仓库
@@ -113,7 +113,7 @@ Git 管理项目时, 文件流转的三个工作区域：
 ### 分支相关
 ```bash
 $ git branch --set-upstream-to=origin/test test  与远程分支建立连接
-$ git branch：不加参数 列出本地
+$ git branch:不加参数 列出本地
     -r                      # 列出远程分支
     -a                      # all
     -name                   # 新建分支
@@ -133,39 +133,39 @@ $ git stash list # 查看储藏栈
 $ git stash pop # 提取最新工作并从栈删除
 $ git cherry-pick # 可以理解为”挑拣”提交, 它会获取某一个分支的单笔提交, 并作为一个新的提交引入到你当前分支上。
 $ git diff 具体修改了那些地方 git diff <local branch> <remote>/<remote branch>对比远程分支
-$ git remote：管理主机名
+$ git remote:管理主机名
     不带参数 -列出所有远程主机
     -v 参看远程主机的网址
     -show <主机名>查看详细信息
-忽略文件：创建一个名为 .gitignore的文件, 列出要忽略的文件模式。
-如：*.a       #忽略所有 .a 结尾的文件    !lib.a    #但 lib.a 除外
+忽略文件:创建一个名为 .gitignore的文件, 列出要忽略的文件模式。
+如:*.a       #忽略所有 .a 结尾的文件    !lib.a    #但 lib.a 除外
 ```
 
 ### 常见误操作处理方法
 
 ```bash
-撤销 add：git reset HEAD
-合并 commit：
-    1. 追加至上一个 commit ：git commit --amend；commit 的时间是不会变的；可加上--no-edit
-    2. 合并多个：git rebase -i commit(-i 后参数可写commitHSAH值即你想合并至哪一个commit
+撤销 add:git reset HEAD
+合并 commit:
+    1. 追加至上一个 commit :git commit --amend;commit 的时间是不会变的;可加上--no-edit
+    2. 合并多个:git rebase -i commit(-i 后参数可写commitHSAH值即你想合并至哪一个commit
         或者-i HEAD~n(HEAD将它看做 你的上一次提交 的别名)HEAD~1 上个版本 HEAD~n 上n个版本)
-        - 紧接着进入vim界面：pick为保留, s或者squash为删除commit
-        - 又另一个vim界面：commit msg 保留自己需要的或者修改, 用#删除别的commit msg
+        - 紧接着进入vim界面:pick为保留, s或者squash为删除commit
+        - 又另一个vim界面:commit msg 保留自己需要的或者修改, 用#删除别的commit msg
 
 如何重置某个文件到未修改的状态？  # git checkout -- <filepath>
 如何重置所有文件到未修改的状态？  # git reset --hard
 如何重置到某个 commit？          # git reset <commit SHA>
 
 git reset用于撤销未被提交到remote的改动, 即撤销local的修改。除了移动当前分支的HEAD, 
-还可以更改workspace和index：
-git reset --soft HEAD^上一个commit, 想撤回俩个用HEAD~2：
-    --soft：修改HEAD, 不修改index和workspace。
-    --mixed：修改HEAD和index, 不修改workspace。默认行为。
-    --hard：修改HEAD、index、workspace。把index和workspace的修改全部撤销。
+还可以更改workspace和index:
+git reset --soft HEAD^上一个commit, 想撤回俩个用HEAD~2:
+    --soft:修改HEAD, 不修改index和workspace。
+    --mixed:修改HEAD和index, 不修改workspace。默认行为。
+    --hard:修改HEAD、index、workspace。把index和workspace的修改全部撤销。
 ```
 
 ## 常见错误处理方法
 
-> git pull or push报错：fatal: refusing to merge unrelated histories (拒绝合并不相关的历史)
+> git pull or push报错:fatal: refusing to merge unrelated histories (拒绝合并不相关的历史)
 
 则在 pull 命令后紧接着使用 `--allow-unrelated-history` 选项来解决问题(该选项可以合并两个独立启动仓库的历史)

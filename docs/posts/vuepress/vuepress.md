@@ -165,3 +165,19 @@ docker-compose down/up
 > vscode 连接服务器
 
 使用 ms-vscode-remote.remote-ssh 插件 让操作服务器和在本地一样方便
+
+## 本地博客开发流程
+```sh
+yarn docs:build
+git add .
+git commit 
+git push
+
+docker build -f docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
+docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+docker pull registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+
+1、本地写博客 打包 push 
+2、服务器 pull 
+3、 docker-compose down up
+```

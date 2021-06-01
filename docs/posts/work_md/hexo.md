@@ -23,16 +23,16 @@ or 使用yarn
 ##### 项目文件介绍
 ![hexo目录](https://www.cnblogs.com/images/cnblogs_com/luoyangyang/1573981/t_hexo_mulu.png)
 
-- deploy：执行hexo deploy命令部署到GitHub上的内容目录
-- public：执行hexo generate命令, 输出的静态网页内容目录
-- scaffolds：layout模板文件目录, 其中的md文件可以添加编辑
-- scripts：扩展脚本目录, 这里可以自定义一些javascript脚本
-- source：文章源码目录, 该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录, 404文件、favicon.ico文件, CNAME文件等都应该放这里, 该目录下可新建页面目录。 
-    - drafts：草稿文章
-    - posts：发布文章
-- themes：主题文件目录
-- _config.yml：全局配置文件, 大多数的设置都在这里
-- package.json：应用程序数据, 指明hexo的版本等信息, 类似于一般软件中的关于按钮
+- deploy:执行hexo deploy命令部署到GitHub上的内容目录
+- public:执行hexo generate命令, 输出的静态网页内容目录
+- scaffolds:layout模板文件目录, 其中的md文件可以添加编辑
+- scripts:扩展脚本目录, 这里可以自定义一些javascript脚本
+- source:文章源码目录, 该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录, 404文件、favicon.ico文件, CNAME文件等都应该放这里, 该目录下可新建页面目录。 
+    - drafts:草稿文章
+    - posts:发布文章
+- themes:主题文件目录
+- _config.yml:全局配置文件, 大多数的设置都在这里
+- package.json:应用程序数据, 指明hexo的版本等信息, 类似于一般软件中的关于按钮
 
 
 ##### 本地查看效果
@@ -46,7 +46,7 @@ or 使用yarn
 ##### 创建项目代码库
 
 1. 注册完登陆后, 我们就创建一个我们自己的Github Pages项目。点击New repository。
-2. 创建要点如下：
+2. 创建要点如下:
 ![如图](https://user-gold-cdn.xitu.io/2018/1/20/161117c7492a1849?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 ##### 配置SSH密钥
@@ -62,7 +62,7 @@ or 使用yarn
 2. 在GitHub账户中添加你的公钥
 3. 测试
 
-可以输入下面的命令, 看看设置是否成功, git@github.com的部分不要修改：
+可以输入下面的命令, 看看设置是否成功, git@github.com的部分不要修改:
 > $ ssh -T git@github.com
 
 出现 yes/no ？ 输入yes
@@ -92,9 +92,9 @@ or 使用yarn
 或者
 > hexo g -d
 
-执行完之后会让你输入github的账号和密码, 输入完后就可以登录我们自己的部署在Github Pages服务器上的博客了。对应的地址是 username.github.io(我的是：luoyangyang369.github.io)。
+执行完之后会让你输入github的账号和密码, 输入完后就可以登录我们自己的部署在Github Pages服务器上的博客了。对应的地址是 username.github.io(我的是:luoyangyang369.github.io)。
 
-假如这时候, 报错 ERROR Deployer not found: git, 那么就是你的deployer没有安装成功, 你需要执行如下命令再安装一次：
+假如这时候, 报错 ERROR Deployer not found: git, 那么就是你的deployer没有安装成功, 你需要执行如下命令再安装一次:
 > npm install hexo-deployer-git --save
 
 这样, 你再执行hexo g -d, 你的博客就部署到Github上了。
@@ -110,11 +110,11 @@ or 使用yarn
 3. 修改Hexo配置文件
 
 下载完成后, 打开Hexo文件夹下的配置文件_config.yml
-修改参数为：theme: hexo-theme-next
+修改参数为:theme: hexo-theme-next
 
 4. 部署主题, 本地查看效果
 > hexo -g => hexo -s  
-> 简写：hexo server -g
+> 简写:hexo server -g
 
 5. 如果效果满意, 将它部署到Github上
 
@@ -148,6 +148,6 @@ or 使用yarn
 [域名网址](https://www.aliyun.com/)
 [域名控制台](https://account.aliyun.com/login/login.htm?oauth_callback=http%3A%2F%2Fdc.console.aliyun.com%2Fnext%2Findex#/domain/list/all-domain)
 
-## 参考资料：
+## 参考资料:
 [2018, 你该搭建自己的博客了！](https://juejin.im/entry/5a574864f265da3e3c6c1217)
 [使用指南](https://fluid-dev.github.io/hexo-fluid-docs/guide/)

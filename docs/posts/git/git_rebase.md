@@ -42,9 +42,9 @@ git push
 git checkout 13.0
 git pull
 git checkout studio-dev-lyy
-# 切换到 studio-dev-lyy 分支后， 就是修改代码
-# 修改完了， 就正常提交代码 ------- git commit
-# 如果有多次 studio-dev-lyy 分支的提交，就合并，只有一次可以不合并
+# 切换到 studio-dev-lyy 分支后,  就是修改代码
+# 修改完了,  就正常提交代码 ------- git commit
+# 如果有多次 studio-dev-lyy 分支的提交, 就合并, 只有一次可以不合并
 git rebase -i HEAD~2  // 合并提交 --- 2表示合并两个
 
 # 将 13.0 内容合并到 studio-dev-lyy
