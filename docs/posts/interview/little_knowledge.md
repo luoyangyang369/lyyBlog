@@ -1,12 +1,12 @@
 ---
 title: 小知识总结
 date: 2019-7-16 17:25:25
-tags: [学习]
+tags: [面试]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
-categories: 学习
+categories: 面试
 ---
 
 <!-- more -->

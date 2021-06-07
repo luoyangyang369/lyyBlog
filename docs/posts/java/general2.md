@@ -11,6 +11,8 @@ copyright : ture  # 授权问题显示
 categories: Java
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
+prev: general
+next: general3
 ---
 <!-- [[toc]]  # 在页面显示目录 -->
 
@@ -24,6 +26,13 @@ equals() : 它的作用也是判断两个对象是否相等。但它一般有两
 
 - 情况 1:类没有覆盖 equals() 方法。则通过 equals() 比较该类的两个对象时, 等价于通过“==”比较这两个对象。
 - 情况 2:类覆盖了 equals() 方法。一般, 我们都覆盖 equals() 方法来比较两个对象的内容是否相等;若它们的内容相等, 则返回 true (即, 认为这两个对象相等)。
+
+## hashCode 与 equals
+hashCode()与 equals() 的相关规定：
+
+1. 如果两个对象相等，则 hashcode 一定也是相同的
+2. 两个对象相等，对两个 equals() 方法返回 true
+3. 两个对象有相同的 hashcode 值，它们也不一定是相等的
 
 ## 关于 final 关键字的一些总结
 

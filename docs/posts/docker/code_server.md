@@ -3,7 +3,7 @@ title: run code in docker code-server
 date: 2021-03-15 17:25:25  # 建立日期
 updated: 2021-03-16 17:25:25  # 更新日期
 tags: [docker, code-server]
-categories: docker
+categories: 运维
 
 comments: true  # 开启文章的评论功能
 copyright : ture  # 授权问题显示

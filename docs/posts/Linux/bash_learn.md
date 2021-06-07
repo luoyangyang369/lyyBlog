@@ -1,12 +1,12 @@
 ---
 title: bash学习
 date: 2019-1-20 17:25:25
-tags: [Linux]
+tags: [bash]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
-categories: bash
+categories: Linux
 ---
 
 <!-- more -->

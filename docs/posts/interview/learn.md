@@ -1,12 +1,12 @@
 ---
 title: 学习网站
 date: 2019-1-16
-tags: [学习]
+tags: [面试]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 10  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
-categories: 学习
+categories: 面试
 sticky: 1  # 文章置顶
 ---
 
@@ -17,6 +17,7 @@ sticky: 1  # 文章置顶
 
 - [hellogithub](https://hellogithub.com/)
 - [免费的编程中文书籍索引](https://github.com/justjavac/free-programming-books-zh_CN)
+- [ThoughtWorks洞见](https://insights.thoughtworks.cn/)
 
 ## 面试
 
@@ -32,6 +33,7 @@ sticky: 1  # 文章置顶
 - [面试题](http://www.cjjjs.com/page/topicinfo?id_topic=63)
 - [饿了么面试](https://elemefe.github.io/node-interview/#/sections/zh-cn/)
 - [JavaGuide面试突击版](https://snailclimb.gitee.io/javaguide-interview/#/)
+- [互联网公司常用框架源码赏析](https://doocs.github.io/source-code-hunter/#/)
 
 ## 总结
 
@@ -59,6 +61,7 @@ sticky: 1  # 文章置顶
 - [标准版的API规范](http://jdk8_api.dev.jcstaff.club/)
 - [注解和反射](https://www.bilibili.com/video/BV1p4411P7V3?p=1)
 - [java相关](https://github.com/rbmonster/learning-note)
+- [在线Java学习](https://codegym.cc/zh/quests/tutorial)
 
 ## 计算机概念
 
@@ -67,6 +70,7 @@ sticky: 1  # 文章置顶
 
 ## 网络
 
+- [关于三次握手和四次挥手，面试官想听到怎样的回答？](https://www.zhihu.com/question/271701044/answer/1279809269)
 - [数字签名](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
 - [HTTPS 升级指南](http://www.ruanyifeng.com/blog/2016/08/migrate-from-http-to-https.html)
 

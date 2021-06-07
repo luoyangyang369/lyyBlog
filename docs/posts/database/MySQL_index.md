@@ -4,7 +4,7 @@ date: 2019-4-15 15:25:25
 tags: [MySQL, 索引]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-categories: MySQL
+categories: database
 # image: https://www.cnblogs.com/images/cnblogs_com/luoyangyang/1573981/t_index.jpg
 ---
 

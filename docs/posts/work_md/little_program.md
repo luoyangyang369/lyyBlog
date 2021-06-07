@@ -4,7 +4,7 @@ date: 2019-8-26 15:25:25
 tags: [小程序]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-categories: 小程序
+categories: 其他
 # image: https://www.cnblogs.com/images/cnblogs_com/luoyangyang/1573981/t_index.jpg
 ---
 

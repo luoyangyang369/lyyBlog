@@ -3,7 +3,7 @@ title: vuepress blog
 date: 2021-03-15 17:25:25  # 建立日期
 updated: 2021-03-16 17:25:25  # 更新日期
 tags: [vuepress]
-categories: vuepress
+categories: 其他
 
 comments: true  # 开启文章的评论功能
 index_img: /img/avatar.png
@@ -24,6 +24,8 @@ prev: ../interview/learn
 <!-- more -->
 
 ## 参考
+
+- [Markdown语法](https://markdown.com.cn/basic-syntax/)
 - [Markdown详解](https://www.moyundong.com/frontend/vuepress/5Markdown%E8%AF%A6%E8%A7%A3.html)
 - [icon选择](https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html)
 - [主题配置](https://v0.vuepress.vuejs.org/zh/default-theme-config/#%E9%A6%96%E9%A1%B5)

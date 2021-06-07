@@ -3,7 +3,7 @@ title: git 常用命令
 date: 2019-1-15 21:20:05  # 建立日期
 updated: 2021-03-16 17:25:25  # 更新日期
 tags: [git, 命令]
-categories: git
+categories: 其他
 
 comments: true  # 开启文章的评论功能
 index_img: /img/avatar.png

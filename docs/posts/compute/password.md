@@ -6,7 +6,7 @@ index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
-categories: 密码学
+categories: 计算机基础
 ---
 
 <!-- more -->

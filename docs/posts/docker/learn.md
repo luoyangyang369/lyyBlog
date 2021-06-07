@@ -4,7 +4,7 @@ date: 2021-03-15 17:25:25  # 建立日期
 updated: 2021-03-16 17:25:25  # 更新日期
 comments: true  # 开启文章的评论功能
 tags: [docker]
-categories: docker
+categories: 运维
 
 copyright : ture  # 授权问题显示
 auto_spacing: true  # 在中文和英文之间加入空格

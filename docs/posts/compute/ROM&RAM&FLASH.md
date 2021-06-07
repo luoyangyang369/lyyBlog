@@ -1,12 +1,12 @@
 ---
 title: ROM&RAM&FLASH
 date: 2019-6-13 17:25:25
-tags: [计算机]
+tags: [计算机基础]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
-categories: 计算机
+categories: 计算机基础
 ---
 
 初学MCU的人, 经常会看到ROM, RAM, FLASH, 而且会被这些词汇搞得晕头转向。本文对这些概念进行了厘清, 并介绍了这些Memory的区别

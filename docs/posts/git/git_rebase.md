@@ -3,7 +3,7 @@ title: git rebase
 date: 2021-03-15 17:25:25  # 建立日期
 updated: 2021-03-16 17:25:25  # 更新日期
 tags: [git]
-categories: git
+categories: 其他
 
 comments: true  # 开启文章的评论功能
 top: 9  # 设置权重, 主页那个先显示

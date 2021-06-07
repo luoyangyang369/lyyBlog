@@ -11,6 +11,8 @@ copyright : ture  # 授权问题显示
 categories: Java
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
+prev: general2
+# next: general3
 ---
 <!-- [[toc]]  # 在页面显示目录 -->
 
@@ -20,7 +22,7 @@ external_link: true  # 在新标签中打开链接
 - Set(注重独一无二的性质): 存储的元素是无序的、不可重复的.
 - Map(用 Key 来搜索的专家): 使用键值对(kye-value)存储, 类似于数学上的函数 y=f(x), “x”代表 key, "y"代表 value, Key 是无序的、不可重复的, value 是无序的、可重复的, 每个键最多映射到一个值.
 
-## Arraylist 与 LinkedList 区别?
+### Arraylist 与 LinkedList 区别?
 
 1、 **是否保证线程安全**: ArrayList 和 LinkedList 都是不同步的, 也就是不保证线程安全;
 
@@ -36,11 +38,17 @@ external_link: true  # 在新标签中打开链接
 
 5、 **内存空间占用**: ArrayList 的空 间浪费主要体现在在 list 列表的结尾会预留一定的容量空间, 而 LinkedList 的空间花费则体现在它的每一个元素都需要消耗比 ArrayList 更多的空间(因为要存放直接后继和直接前驱以及数据).
 
-## 常用集合分类
-![常用集合分类](/img/jihemap.png)
-
 ### HashMap 和 HashTable 的区别
-- HashMap
+
+1、 **线程是否安全**： HashMap 是非线程安全的，HashTable 是线程安全的,因为 HashTable 内部的方法基本都经过synchronized 修饰。（如果你要保证线程安全的话就使用 ConcurrentHashMap 吧！）；
+
+2、 **效率**： 因为线程安全的问题，HashMap 要比 HashTable 效率高一点。另外，HashTable 基本被淘汰，不要在代码中使用它；
+
+3、 **对 Null key 和 Null value 的支持**： HashMap 可以存储 null 的 key 和 value，但 null 作为键只能有一个，null 作为值可以有多个；HashTable 不允许有 null 键和 null 值，否则会抛出 NullPointerException。
+
+4、 **初始容量大小和每次扩充容量大小的不同** ： ① 创建时如果不指定容量初始值，Hashtable 默认的初始大小为 11，之后每次扩充，容量变为原来的 2n+1。HashMap 默认的初始化大小为 16。之后每次扩充，容量变为原来的 2 倍。② 创建时如果给定了容量初始值，那么 Hashtable 会直接使用你给定的大小，而 HashMap 会将其扩充为 2 的幂次方大小（HashMap 中的tableSizeFor()方法保证，下面给出了源代码）。也就是说 HashMap 总是使用 2 的幂作为哈希表的大小,后面会介绍到为什么是 2 的幂次方。
+
+5、 **底层数据结构**： JDK1.8 以后的 HashMap 在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为 8）（将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树）时，将链表转化为红黑树，以减少搜索时间。Hashtable 没有这样的机制。
 
 简单来说, HashMap由数组+链表组成的, 数组是HashMap的主体, 链表则是主要为了解决哈希冲突而存在的, 如果定位到的数组位置不含链表(当前entry的next指向null),那么查找, 添加等操作很快, 仅需一次寻址即可;如果定位到的数组包含链表, 对于添加操作, 其时间复杂度为O(n), 首先遍历链表, 存在即覆盖, 否则新增;对于查找操作来讲, 仍需遍历链表, 然后通过key对象的equals方法逐一比对查找.所以, 性能考虑, HashMap中的链表出现越少, 性能才会越好.
 
@@ -50,6 +58,18 @@ HashTable|HashMap
 key和value都不允许为null, Hashtable遇到null,  直接返回NullPointerException|key和value都允许为nill, HashMap遇到key为nl的时候, 调用putForNullkey方法进行处理.|
 线程安全几乎所有的public的方法都是synchronized的|非线程安全|
 速度慢|速度快|
+
+### HashMap 和 HashSet区别
+
+如果你看过 HashSet 源码的话就应该知道：HashSet 底层就是基于 HashMap 实现的。（HashSet 的源码非常非常少，因为除了 clone()、writeObject()、readObject()是 HashSet 自己不得不实现之外，其他方法都是直接调用 HashMap 中的方法。
+
+HashMap|	HashSet
+:---:|:--:
+实现了 Map 接口|	实现 Set 接口
+存储键值对|	仅存储对象
+调用 put()向 map 中添加元素|	调用 add()方法向 Set 中添加元素
+HashMap 使用键（Key）计算 hashcode|	HashSet 使用成员对象来计算 hashcode 值，对于两个对象来说 hashcode 可能相同，所以 equals()方法用来判断对象的相等性
+
 
 ### HashMap 和 LinkedHashMap 的区别
 HashMap|LinkedHashMap

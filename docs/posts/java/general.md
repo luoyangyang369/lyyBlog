@@ -11,6 +11,8 @@ copyright : ture  # 授权问题显示
 categories: Java
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
+# prev: ../java/learn
+next: general2
 ---
 <!-- [[toc]]  # 在页面显示目录 -->
 
