@@ -9,7 +9,7 @@ categories: 运维
 copyright : ture  # 授权问题显示
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
-sticky: 100  # 文章置顶
+# sticky: 100  # 文章置顶
 # prev: ../interview/learn
 # next:
 ---
@@ -20,6 +20,7 @@ docker 知识总结
 ## 参考资料
 - [Docker的三大核心组件:镜像、容器与仓库](http://dockone.io/article/9249)
 - [Docker — 从入门到实践](https://vuepress.mirror.docker-practice.com/)
+- [为什么要用 Docker](https://yeasy.gitbook.io/docker_practice/introduction/why)
 
 ![docker](/img/docker1.png)
 

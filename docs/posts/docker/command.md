@@ -9,7 +9,7 @@ categories: 运维
 copyright : ture  # 授权问题显示
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
-sticky: 100  # 文章置顶
+# sticky: 100  # 文章置顶
 # prev: ../interview/learn
 # next:
 ---

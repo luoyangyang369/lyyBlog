@@ -15,7 +15,7 @@ external_link: true  # 在新标签中打开链接
 # keys:  # 阅读密码
 #  - '123456'
 # publish: false  # 文章是否发布
-sticky: 100  # 文章置顶
+# sticky: 100  # 文章置顶
 prev: ../interview/learn
 # next:
 ---
