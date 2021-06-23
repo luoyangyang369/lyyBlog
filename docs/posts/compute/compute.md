@@ -7,7 +7,7 @@ tags: [Linux]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 9  # 设置权重,  主页那个先显示
-sticky: 2  # 文章置顶
+# sticky: 2  # 文章置顶
 copyright : ture  # 授权问题显示
 categories: Linux
 auto_spacing: true  # 在中文和英文之间加入空格

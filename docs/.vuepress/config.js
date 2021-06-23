@@ -44,7 +44,11 @@ module.exports = {
 		nav: [
 			{ text: '首页', link: '/', icon: 'reco-home' },
 			{ text: '归档', link: '/timeline/', icon: 'reco-date' },
-			// { text: 'External', link: 'https://google.com' }, // 外部链接
+			{ text: '学习', link: '/posts/interview/learn' }, // 外部链接
+			{ text: '参考资料', items: [
+				{text: 'doccs', link:'https://doocs.github.io/#/README_CN'},
+				{text: 'CS-Notes', link:'http://www.cyc2018.xyz/'},
+			] }, // 外部链接
 			// 下拉列表显示分组
 			{
 				text: '高级',
@@ -66,7 +70,7 @@ module.exports = {
 						text: '面试',
 						items: [
 							{ text: '面试题', link: '/posts/interview/interview' },
-							{ text: '学习资料', link: '/posts/interview/learn' },
+							{ text: '面试题总结', link: '/posts/interview/interview2' },
 						]
 					},
 				]

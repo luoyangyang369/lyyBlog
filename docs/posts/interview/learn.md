@@ -18,10 +18,14 @@ sticky: 1  # 文章置顶
 - [hellogithub](https://hellogithub.com/)
 - [免费的编程中文书籍索引](https://github.com/justjavac/free-programming-books-zh_CN)
 - [ThoughtWorks洞见](https://insights.thoughtworks.cn/)
+- [ Doocs ](https://doocs.github.io/#/README_CN)
 
 ## 面试
 
+- [JavaGuide面试突击版](https://snailclimb.gitee.io/javaguide-interview/#/)
+- [Java面试+Java学习指南](https://github.com/AobingJava/JavaFamily)
 - [DreamHunter Notes](https://notes.jcstaff.club/interview/interview.html)
+- [秒杀系统设计与实现.互联网工程师进阶与分析](https://github.com/qiurunze123/miaosha)
 - [面试题](https://github.com/souyunku/DevBooks)
 - [2021年最新总结](https://github.com/0voice/interview_internal_reference)
 - [如何准备编程面试](https://yangshun.github.io/tech-interview-handbook/coding-round-overview)
@@ -33,29 +37,28 @@ sticky: 1  # 文章置顶
 - [做简历注意事项, 让你的简历更能引起面试官注意](https://yangshun.github.io/tech-interview-handbook/resume)
 - [面试题](http://www.cjjjs.com/page/topicinfo?id_topic=63)
 - [饿了么面试](https://elemefe.github.io/node-interview/#/sections/zh-cn/)
-- [JavaGuide面试突击版](https://snailclimb.gitee.io/javaguide-interview/#/)
 - [互联网公司常用框架源码赏析](https://doocs.github.io/source-code-hunter/#/)
 
 ## 总结
 
 - [CS-Notes](http://www.cyc2018.xyz/)
-- [JavaGuide](https://github.com/Snailclimb/JavaGuide)
-- [AobingJava](https://github.com/AobingJava/JavaFamily)
+- [Java工程师进阶知识](https://adjava.netlify.app/#/)
+- [码农翻身](https://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg==&mid=2665514860&idx=1&sn=641187383bb8d9d3f56009a7ed1e2696&chksm=80d67f2fb7a1f639384a807b0496a03794cf3f47b24d8c41ddc49b02f43bb1924becbd7cf035&scene=21#wechat_redirect)
+- [码农翻身2](https://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg==&mid=2665523598&idx=1&sn=ecb7512a1b1dbab5620d78c4963b5627&chksm=80d651cdb7a1d8db44237fec1fc2410da047ba639ba7e39edce3bbcdee28014718e6c6227b09&scene=21#wechat_redirect)
 - [bugstack](https://bugstack.cn/)
-- [advanced-java](https://github.com/doocs/advanced-java)
 - [spring-analysis](https://github.com/seaswalker/spring-analysis)
 - [日拱一兵](https://dayarch.top/)
 - [美团技术团队](https://tech.meituan.com/)
 
 ## Java
 
+- [javaGuide](https://snailclimb.gitee.io/javaguide/#/)
 - [Think IN JAVA 在线中文版](http://www.yq1012.com/ThinkingInJava/)
 - [Java工程师成神之路](http://hollischuang.gitee.io/tobetopjavaer/#/)
-- [javaGuide](https://snailclimb.gitee.io/javaguide/#/)
 - [《On Java 8》中文版](https://lingcoder.github.io/OnJava8/#/)
-- [Java教程](http://c.biancheng.net/java/)
+- [处于萌芽阶段的 Java 核心知识库](https://crossoverjie.top/JCSprout/#/)
 - [PassJava 学习教程](http://www.passjava.cn/#/)
-- [Java工程师进阶知识](https://adjava.netlify.app/#/)
+- [Java教程](http://c.biancheng.net/java/)
 - [Java 到底是值传递还是引用传递？](https://www.zhihu.com/question/31203609)
 - [Java 编程思想](https://wizardforcel.gitbooks.io/thinking-in-java/content/)
 - [Spring Boot 指南](https://snailclimb.gitee.io/springboot-guide/#/)
@@ -63,6 +66,11 @@ sticky: 1  # 文章置顶
 - [注解和反射](https://www.bilibili.com/video/BV1p4411P7V3?p=1)
 - [java相关](https://github.com/rbmonster/learning-note)
 - [在线Java学习](https://codegym.cc/zh/quests/tutorial)
+
+## go
+
+- [Go 语言设计与实现](https://draveness.me/golang/)
+- [Go 入门指南](https://github.com/unknwon/the-way-to-go_ZH_CN)
 
 ## 计算机概念
 
@@ -92,6 +100,10 @@ sticky: 1  # 文章置顶
 - [MySQL相关知识](https://cyc2018.github.io/CS-Notes/#/notes/MySQL)
 - [SQL优化方案](https://mp.weixin.qq.com/s/YMxLYbVuF_7rfaawp8flOA)
 - [MySQL](https://juejin.im/post/5cb6c4ef51882532b70e6ff0)
+
+## Redis
+
+- [Redis 系列](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzAwNDA2OTM1Ng==&action=getalbum&album_id=1323328139262754819&scene=173&from_msgid=2453140867&from_itemidx=2&count=3&nolastread=1#wechat_redirect)
 
 ## Python
 - [python3-codebook](https://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)

@@ -13,6 +13,8 @@ categories: 运维
 
 ## 参考资料
 
+- [8分钟带你深入浅出搞懂Nginx](https://zhuanlan.zhihu.com/p/34943332)
+- [连前端都看得懂的《Nginx 入门指南》](https://juejin.cn/post/6844904129987526663)
 - [nginx 这一篇就够了](https://juejin.im/post/5d81906c518825300a3ec7ca)
 - [Nginx中文文档](https://www.nginx.cn/doc/)
 

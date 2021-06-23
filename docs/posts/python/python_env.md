@@ -64,11 +64,19 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### 虚拟环境搭建
 
+#### virtualenv
 pip install virtualenv
 一般需要安装一个管理工具:pip install virtualenvwrapper-win　　只有它可以使用workon
 创建虚拟环境:mkvirtualenv test1
 退出:deactivate
 删除:rmvirtualenv venv
+
+#### venv
+
+Python3 自带的
+python3 -m venv env1(创建路径)
+source env1/bin/activate 进入虚拟环境
+退出:deactivate
 
 ## pycharm
 [参考](https://zhuanlan.zhihu.com/p/26066151)
