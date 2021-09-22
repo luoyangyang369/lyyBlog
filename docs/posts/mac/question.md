@@ -30,6 +30,26 @@ prev: ../interview/learn
 brew tap 可以为 brew 的软件的跟踪,更新,安装添加更多的的tap formulae
 `brew cleanup --prune=all` 清理缓存
 
+```
+brew search name：联网搜索软件是否存在 brew 中
+brew install name：安装软件
+brew upgrade name：更新软件
+brew uninstall name：卸载软件
+brew reinstall name：重新安装软件
+brew info name：查看软件安装地址
+brew cleanup：清理缓存等
+brew doctor：查看建议，例如升级等
+``` 
+
+### macOS 10.13及以上版本安装允许任何来源没了怎么开启？
+
+[macOS 10.13及以上版本安装允许任何来源没了怎么开启？
+](https://zhuanlan.zhihu.com/p/51328476)
+
+1. tem 输入 `sudo spctl --master-disable`
+2. 设置 - 安全性与隐私 - 允许从以下位置下载的 App - 勾上任何来源
+
+
 #### 更新系统后 Python/git 失效
 报错信息: 
 `xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun`

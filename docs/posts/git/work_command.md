@@ -26,6 +26,25 @@ git  工作常用命令
 ## 参考资料
 [图解git](https://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png)
 
+## 工作常用
+
+```git
+$ git pull <远程主机名> <远程分支名>:<本地分支名>  # 合并至当前本地分支, 则  :和  :后可以省略
+$ git push origin(远程仓库名字 默认是origin) dev_lyy(本地):dev_lyy(远程)  # 推送至远程分支, 没有则新建远程分支
+$ git remote -v  # 查看远程分支的情况
+```
+
+- 回退已经 push 上去的代码
+
+1. git log 查到想回退的 commit ID
+2. git reset --soft 上面的ID
+
+> git reset 有三种参数 soft-回到 index 区 mixed-工作区 hard-直接丢弃掉代码
+
+想要撤回中间某次commit，可以使用命令
+
+> git revert commit_id  # 和reset区别是 revert只撤销某一个commit， 而reset是撤销至某个commit的代码
+
 ## 初始化项目
 
 ### 方法1 
@@ -68,14 +87,6 @@ $ git push origin master -f # -f 表示强制覆盖 需要保留线上文件则�
 $ git pull origin master # 可能需要在上一步之前执行
 ```
 然后如果需要账号密码的话就输入账号密码, 这样就完成了一次提交。此时, 你可以在你的个人面板、仓库主页查看到你的提交记录。
-
-## 工作常用
-
-**后面的命令一定要进入项目目录, 即包含 .git 的目录**
-```
-$ git pull <远程主机名> <远程分支名>:<本地分支名>  # 合并至当前本地分支, 则  :和  :后可以省略
-$ git push origin dev_lyy(本地):dev_lyy(远程)  # 推送至远程分支, 没有则新建远程分支
-```
 
 ## 命令
 

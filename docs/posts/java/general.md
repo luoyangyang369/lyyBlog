@@ -27,6 +27,8 @@ next: general2
 - [Java工程师进阶知识](https://adjava.netlify.app/#/)
 - [标准版的API规范](http://jdk8_api.dev.jcstaff.club/)
 - [可能是把Java内存区域讲的最清楚的一篇文章](https://github.com/Snailclimb/JavaGuide/blob/3965c02cc0f294b0bd3580df4868d5e396959e2e/Java%E7%9B%B8%E5%85%B3/%E5%8F%AF%E8%83%BD%E6%98%AF%E6%8A%8AJava%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E8%AE%B2%E7%9A%84%E6%9C%80%E6%B8%85%E6%A5%9A%E7%9A%84%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0.md)
+- [Java泛型详解](https://www.cnblogs.com/Blue-Keroro/p/8875898.html)
+- [泛型面试题](https://cloud.tencent.com/developer/article/1033693)
 
 #### Java 到底是值传递还是引用传递？
 

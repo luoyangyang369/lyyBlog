@@ -1,12 +1,12 @@
 ---
 title: pm2工作使用
 date: 2019-9-13 17:25:25
-tags: [node]
+tags: [Node]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
 top: 9  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
-categories: node
+categories: Node
 ---
 
 pm2 基本知识及常用命令

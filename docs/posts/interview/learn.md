@@ -50,6 +50,11 @@ sticky: 1  # 文章置顶
 - [日拱一兵](https://dayarch.top/)
 - [美团技术团队](https://tech.meituan.com/)
 
+## 算法
+
+- [算法小贴士](https://yangshun.github.io/tech-interview-handbook/algorithms/algorithms-introduction) (各类算法小贴士, 以及按主题分类过的最容易考到的问题)
+- [力扣加加](https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/)
+
 ## Java
 
 - [javaGuide](https://snailclimb.gitee.io/javaguide/#/)
@@ -66,6 +71,7 @@ sticky: 1  # 文章置顶
 - [注解和反射](https://www.bilibili.com/video/BV1p4411P7V3?p=1)
 - [java相关](https://github.com/rbmonster/learning-note)
 - [在线Java学习](https://codegym.cc/zh/quests/tutorial)
+- [《唯品会Java开发手册》1.0.2版](https://vipshop.github.io/vjtools/#/standard/)
 
 ## go
 
@@ -116,10 +122,6 @@ sticky: 1  # 文章置顶
 - [Node.js 简介](http://nodejs.cn/learn)
 - [node流的概念](https://juejin.im/post/5940a9c3128fe1006a0ab176)
 
-## 算法
-
-- [算法小贴士](https://yangshun.github.io/tech-interview-handbook/algorithms/algorithms-introduction) (各类算法小贴士, 以及按主题分类过的最容易考到的问题)
-
 ## docker
 
 - [Docker的三大核心组件:镜像、容器与仓库](http://dockone.io/article/9249)
@@ -161,3 +163,30 @@ sticky: 1  # 文章置顶
 - Linux就该这么学
 - MySQL必知必会
 - 深入浅出MySQL
+
+## 简历
+
+- [Markdown简历排版工具](https://resume.mdnice.com/)
+- [超级简历](https://www.wondercv.com/)
+- [best-resume-ever 基于Vue和LESS快速生成简历模板](https://github.com/salomonelli/best-resume-ever)
+- [极简简历](https://www.polebrief.com/index)
+- [typora+markdown+css 自定义简历模板](https://github.com/Snailclimb/typora-markdown-resume)
+
+## 常考面试题
+
+- [面试总结](https://mp.weixin.qq.com/s/gBr3UfC1HRcw4U-ZMmtRaQ)
+
+- [『浅入浅出』MySQL 和 InnoDB](https://draveness.me/mysql-innodb/)
+- [Innodb中的事务隔离级别和锁的关系](https://tech.meituan.com/2014/08/20/innodb-lock.html)
+- [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
+- [MySQL 性能优化神器 Explain 使用分析](https://segmentfault.com/a/1190000008131735)
+
+- [论述Redis和Memcached的差异](https://www.cnblogs.com/loveincode/p/7411911.html)
+- [Redis应用场景](http://www.scienjus.com/redis-use-case/)
+- [《吊打面试官》系列-Redis基础](https://mp.weixin.qq.com/s?__biz=MzAwNDA2OTM1Ng==&mid=2453140867&idx=2&sn=5c573be40ff3e897bed2ede542ef8c34&chksm=8cf2d700bb855e166f6c8db7d89185b26139ace92ef70484084ce2abd9a6c9e66eb0f84b9695&scene=178&cur_album_id=1323328139262754819#rd)
+- [分布式锁](https://mp.weixin.qq.com/s/EGGe14IpEsho75ntjeR3OA)
+
+- [彻底明白TCP的三次握手与四次挥手](https://blog.csdn.net/qzcsu/article/details/72861891)
+- [Linux IO模式及 select、poll、epoll详解](https://segmentfault.com/a/1190000003063859)
+- [必刷编程80道](https://www.lintcode.com/collection/195/)
+- [算法](https://lc.netlify.app/#/)

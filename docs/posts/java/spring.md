@@ -61,6 +61,10 @@ com
 - controller 负责页面访问控制
 - config 目录主要放一些配置类
 
+## Spring IOC 容器
+
+
+
 ## 装饰器
 ### @SpringBootApplication 
 以下三种装饰器的集合

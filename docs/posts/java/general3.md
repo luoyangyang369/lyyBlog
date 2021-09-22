@@ -20,7 +20,39 @@ prev: general2
 
 - List(对付顺序的好帮手): 存储的元素是有序的、可重复的.
 - Set(注重独一无二的性质): 存储的元素是无序的、不可重复的.
-- Map(用 Key 来搜索的专家): 使用键值对(kye-value)存储, 类似于数学上的函数 y=f(x), “x”代表 key, "y"代表 value, Key 是无序的、不可重复的, value 是无序的、可重复的, 每个键最多映射到一个值.
+- Map(用 Key 来搜索的专家): 使用键值对(kye-value)存储, Key 是无序的、不可重复的, value 是无序的、可重复的, 每个键最多映射到一个值.
+
+## List
+
+- CopyOnWriteArrayList
+读写分离
+
+写操作在一个复制的数组上进行，读操作还是在原始数组中进行，读写分离，互不影响。
+
+写操作需要加锁，防止并发写入时导致写入数据丢失。
+
+写操作结束之后需要把原始数组指向新的复制数组。
+
+- LinkedList
+基于双向链表实现，使用 Node 存储链表节点信息
+
+每个链表存储了 first 和 last 指针
+
+> 与 ArrayList 的比较
+
+ArrayList 基于动态数组实现，LinkedList 基于双向链表实现
+
+ArrayList 和 LinkedList 的区别可以归结为数组和链表的区别：
+
+数组支持随机访问，但插入删除的代价很高，需要移动大量元素
+链表不支持随机访问，但插入删除只需要改变指针
+
+## Map
+
+- TreeMap：基于红黑树实现。
+- HashMap：基于哈希表实现。
+- HashTable：和 HashMap 类似，但它是线程安全的，这意味着同一时刻多个线程同时写入 HashTable 不会导致数据不一致。它是遗留类，不应该去使用它，而是使用 ConcurrentHashMap 来支持线程安全，ConcurrentHashMap 的效率会更高，因为 ConcurrentHashMap 引入了分段锁。
+- LinkedHashMap：使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用（LRU）顺序。
 
 ### Arraylist 与 LinkedList 区别?
 

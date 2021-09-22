@@ -4,7 +4,7 @@ date: 2019-4-15 15:25:25
 tags: [MySQL, 索引]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-categories: database
+categories: MySQL
 # image: https://www.cnblogs.com/images/cnblogs_com/luoyangyang/1573981/t_index.jpg
 ---
 
@@ -65,6 +65,14 @@ k int not null,
 name varchar(16),
 index (k))engine=InnoDB;
 ```
+
+## 三星索引
+
+为了满足三星索引中的三颗星，我们分别需要做以下几件事情：
+
+- 第一颗星需要取出所有等值谓词中的列，作为索引开头的最开始的列（任意顺序）；
+- 第二颗星需要将 ORDER BY 列加入索引中；
+- 第三颗星需要将查询语句剩余的列全部加入到索引中；
 
 ## 补充
 主键与索引的区别:主键也是一种索引, 主键也是一种唯一索引, 但索引的作用主要是提高查找速度, 而主键作用主要是标识记录唯一性(当然也便于查找)。
