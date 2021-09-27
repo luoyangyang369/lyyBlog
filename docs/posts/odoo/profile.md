@@ -1,7 +1,7 @@
 ---
 title: odoo @profile 性能测试
-date: 2021-03-15 17:25:25  # 建立日期
-updated: 2021-03-16 17:25:25  # 更新日期
+date: 2020-04-08 17:25:25  # 建立日期
+updated: 2020-04-08 17:25:25  # 更新日期
 tags: [odoo]
 categories: Python
 

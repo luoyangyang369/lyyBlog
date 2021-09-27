@@ -4,7 +4,7 @@ date: 2019-1-16
 tags: [面试]
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
-top: 10  # 设置权重, 主页那个先显示
+top: 100  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
 categories: 面试
 sticky: 1  # 文章置顶
@@ -122,18 +122,18 @@ sticky: 1  # 文章置顶
 - [Node.js 简介](http://nodejs.cn/learn)
 - [node流的概念](https://juejin.im/post/5940a9c3128fe1006a0ab176)
 
-## docker
+## Docker
 
 - [Docker的三大核心组件:镜像、容器与仓库](http://dockone.io/article/9249)
-- [Docker — 从入门到实践](https://vuepress.mirror.docker-practice.com/)
-- [docker-compose 文档](http://www.dockerinfo.net/docker-compose-%E9%A1%B9%E7%9B%AE)
-- [为什么要用 Docker](https://yeasy.gitbook.io/docker_practice/introduction/why)
+- [Docker — 从入门到实践](https://vuepress.mirror.Docker-practice.com/)
+- [Docker-compose 文档](http://www.Dockerinfo.net/Docker-compose-%E9%A1%B9%E7%9B%AE)
+- [为什么要用 Docker](https://yeasy.gitbook.io/Docker_practice/introduction/why)
 
-## nginx
+## Nginx
 
-- [nginx基本配置与参数说明](https://www.nginx.cn/76.html)
-- [nginx 这一篇就够了](https://juejin.im/post/5d81906c518825300a3ec7ca)
-- [Nginx中文文档](https://www.nginx.cn/doc/)
+- [Nginx基本配置与参数说明](https://www.Nginx.cn/76.html)
+- [Nginx 这一篇就够了](https://juejin.im/post/5d81906c518825300a3ec7ca)
+- [Nginx中文文档](https://www.Nginx.cn/doc/)
 
 ## Linux
 

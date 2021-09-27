@@ -1,10 +1,9 @@
 ---
-title: vuepress blog
-date: 2021-03-15 17:25:25  # 建立日期
-updated: 2021-03-16 17:25:25  # 更新日期
-tags: [vuepress]
+title: Vuepress Blog
+date: 2021-01-18 17:25:25  # 建立日期
+updated: 2021-01-18 17:25:25  # 更新日期
+tags: [Vuepress]
 categories: 其他
-
 comments: true  # 开启文章的评论功能
 index_img: /img/avatar.png
 banner_img: /img/avatar.png  # 详情页图片
@@ -89,55 +88,55 @@ sudo nano /etc/sudoers
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y
 ```
 
-> 安装 docker, 后续的部署全部通过 [docker](https://developer.aliyun.com/article/110806)
+> 安装 Docker, 后续的部署全部通过 [Docker](https://developer.aliyun.com/article/110806)
 ```sh
 # step 1: 安装必要的一些系统工具
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common
 # step 2: 安装GPG证书
-curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+curl -fsSL http://mirrors.aliyun.com/Docker-ce/linux/ubuntu/gpg | sudo apt-key add -
 # Step 3: 写入软件源信息
-sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/Docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 # Step 4: 更新并安装 Docker-CE
 sudo apt-get -y update
-sudo apt-get -y install docker-ce
+sudo apt-get -y install Docker-ce
 ```
 
-> 使普通用户可以使用 docker
+> 使普通用户可以使用 Docker
 ```sh
 # 添加到用户组
-sudo gpasswd -a $USER docker
+sudo gpasswd -a $USER Docker
 # 重新登录
 # 重启
-service docker restart
+service Docker restart
 ```
 
-> 安装 docker-compose (懒人必备)
+> 安装 Docker-compose (懒人必备)
 ```sh
-sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
+sudo curl -L "https://github.com/Docker/compose/releases/download/1.28.5/Docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/Docker-compose
+sudo chmod +x /usr/local/bin/Docker-compose
+Docker-compose --version
 ```
 
 #### 编写 Dockerfile
 
-```docker
-FROM nginx:latest
+```Docker
+FROM Nginx:latest
 
 RUN mkdir /app
 COPY ./docs/.vuepress/dist /app/dist
-COPY ./docker/conf.d /etc/nginx/conf.d
+COPY ./Docker/conf.d /etc/Nginx/conf.d
 
 EXPOSE 80 443
 ```
 
 > 打包镜像
-```docker
-docker build -f docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
-docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+```Docker
+Docker build -f Docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
+Docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
 ```
 
-> 服务器端编写 docker-compose.yml
-```docker
+> 服务器端编写 Docker-compose.yml
+```Docker
 version: '2'
 services:
   vuepress-starter:
@@ -150,18 +149,18 @@ services:
 
 > 启动, 冲
 
-`docker-compose up -d`
+`Docker-compose up -d`
 
->>> 开发流程: 本地修改好重新打包 => push 到 docker 仓库 => 服务器重新 pull 镜像 => docker-compose up -d
+>>> 开发流程: 本地修改好重新打包 => push 到 Docker 仓库 => 服务器重新 pull 镜像 => Docker-compose up -d
 ```sh
 本地执行
 yarn docs:build
-docker build -f docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
-docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+Docker build -f Docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
+Docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
 
 服务器执行
-docker pull registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
-docker-compose down/up
+Docker pull registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+Docker-compose down/up
 ```
 
 > vscode 连接服务器
@@ -175,11 +174,11 @@ git add .
 git commit 
 git push
 
-docker build -f docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
-docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
-docker pull registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+Docker build -f Docker/Dockerfile -t registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1 .
+Docker push registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
+Docker pull registry.cn-shenzhen.aliyuncs.com/luoyangyang/luoyangyang:v1
 
 1、本地写博客 打包 push 
 2、服务器 pull 
-3、 docker-compose down up
+3、 Docker-compose down up
 ```

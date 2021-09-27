@@ -70,5 +70,5 @@ cookies的安全性不好, 攻击者可以通过获取本地cookies进行欺骗�
 5. 中间件, 对响应的数据进行处理
 6. wsgi, 将响应的内容发送给浏览器
 
-## nginx,tomcat,apach到都是什么？
+## Nginx,tomcat,apach到都是什么？
 Nginx(engine x)是一个高性能的HTTP和反向代理服务器, 也是 一个IMAP/POP3/SMTP服务器, 工作在OSI七层, 负载的实现方式:轮询, IP_HASH,fair,session_sticky. Apache HTTP Server是一个模块化的服务器, 源于NCSAhttpd服务器 Tomcat 服务器是一个免费的开放源代码的Web应用服务器, 属于轻量级应用服务器, 是开发和调试JSP程序的首选。

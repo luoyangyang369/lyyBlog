@@ -1,7 +1,7 @@
 ---
-title: Java 基础知识(三)
-date: 2021-03-15 17:25:25  # 建立日期
-updated: 2021-03-16 17:25:25  # 更新日期
+title: Java 基础知识(三) 集合类
+date: 2021-02-18 17:25:25  # 建立日期
+updated: 2021-02-18 17:25:25  # 更新日期
 comments: true  # 开启文章的评论功能
 tags: [Java]
 index_img: /img/avatar.png

@@ -1,7 +1,7 @@
 ---
 title: idea 快捷键
-date: 2021-03-15 17:25:25  # 建立日期
-updated: 2021-03-16 17:25:25  # 更新日期
+date: 2021-01-22 17:25:25  # 建立日期
+updated: 2021-01-22 17:25:25  # 更新日期
 comments: true  # 开启文章的评论功能
 tags: [工具]
 index_img: /img/avatar.png

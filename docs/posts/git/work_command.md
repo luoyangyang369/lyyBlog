@@ -1,7 +1,7 @@
 ---
 title: git 常用命令
-date: 2019-1-15 21:20:05  # 建立日期
-updated: 2021-03-16 17:25:25  # 更新日期
+date: 2018-07-16 17:25:25  # 建立日期
+updated: 2018-07-16 17:25:25  # 更新日期
 tags: [git, 命令]
 categories: 其他
 
@@ -24,7 +24,11 @@ git  工作常用命令
 <!-- more -->
 
 ## 参考资料
-[图解git](https://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png)
+
+- [图解git](https://pic002.cnblogs.com/img/1-2-3/201007/2010072023345292.png)
+- [git rebase](https://blog.csdn.net/nrsc272420199/article/details/85555911)
+- [rebase 用法小结](https://www.jianshu.com/p/4a8f4af4e803)
+- [git rebase VS git merge？ 更优雅的 git 合并方式值得拥有](https://zhuanlan.zhihu.com/p/73767731)
 
 ## 工作常用
 
@@ -136,6 +140,40 @@ $ git push origin --delete branch_name # 删除远程分支
 $ git checkout -b branch_name [branch/commit] # 创建并切换分支
 ```
 
+## git在工作中正确的使用方式- git rebase篇
+
+git rebase master---->解决冲突--->git rebase --continue
+
+### 本地开发分支可以灵活管理
+```git
+git checkout master
+git pull
+git checkout local
+git rebase -i HEAD~2  //合并提交 --- 2表示合并两个
+git rebase master---->解决冲突--->git rebase --continue
+git checkout master
+git merge local
+git push
+```
+
+```git
+git checkout 13.0
+git pull
+git checkout studio-dev-lyy
+# 切换到 studio-dev-lyy 分支后,  就是修改代码
+# 修改完了,  就正常提交代码 ------- git commit
+# 如果有多次 studio-dev-lyy 分支的提交, 就合并, 只有一次可以不合并
+git rebase -i HEAD~2  // 合并提交 --- 2表示合并两个
+
+# 将 13.0 内容合并到 studio-dev-lyy
+git rebase 13.0---->解决冲突--->git rebase --continue
+# 再起切换到 13.0 或其他目标分支
+git checkout 13.0
+# 将 studio-dev-lyy 合并到 13.0
+git merge studio-dev-lyy
+# 推送到远程仓库
+git push
+```
 ### 其他操作
 ```bash
 $ git remote add name git_address   # 关联远程库

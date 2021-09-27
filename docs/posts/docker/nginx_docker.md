@@ -1,8 +1,8 @@
 ---
-title: nginx + docker 搭建应用
-date: 2021-03-15 17:25:25  # 建立日期
-updated: 2021-03-16 17:25:25  # 更新日期
-tags: [docker, nginx]
+title: Nginx + Docker 搭建应用
+date: 2021-01-14 17:25:25  # 建立日期
+updated: 2021-01-14 17:25:25  # 更新日期
+tags: [Docker, Nginx]
 categories: 运维
 
 comments: true  # 开启文章的评论功能
@@ -15,46 +15,46 @@ external_link: true  # 在新标签中打开链接
 # sticky: 100  # 文章置顶
 ---
 
-使用 `docker nginx` 搭建应用记录
+使用 `Docker Nginx` 搭建应用记录
 <!-- more -->
 
 ## 项目目录结构
 
-![目录结构](/img/docker_nginx.png)
+![目录结构](/img/Docker_Nginx.png)
 - 应用1是 [罗洋洋的博客](../vuepress/vuepress.md)
 - 应用2是 [code-server](./code_server.md)
 
-## nginx docker-compose
+## Nginx Docker-compose
 
-```nginx
+```Nginx
 version: '2'
 services:
 
-  my_nginx:
-    container_name: my_nginx
-    image: nginx
+  my_Nginx:
+    container_name: my_Nginx
+    image: Nginx
     restart: always
     ports:
       - 80:80
       - 443:443
     privileged: true
     volumes:
-        - ./conf.d:/etc/nginx/conf.d
-        - ./cert:/etc/nginx/cert
+        - ./conf.d:/etc/Nginx/conf.d
+        - ./cert:/etc/Nginx/cert
     networks:
-      nginx_net:
+      Nginx_net:
         aliases:
-        - my_nginx  # 如果有人需要访问当前应用则可以通过 my_nginx 别名。否则不需要配置此参数
+        - my_Nginx  # 如果有人需要访问当前应用则可以通过 my_Nginx 别名。否则不需要配置此参数
 
 networks:
-  nginx_net:  # 将各个应用用此网络关联起来
+  Nginx_net:  # 将各个应用用此网络关联起来
     external: true
 ```
 
-## nginx.conf
-应用2的 nginx 配置
+## Nginx.conf
+应用2的 Nginx 配置
 
-```nginx
+```Nginx
 server {
     listen 80;
     server_name xcode.lxy-home.cn;  # 监听此域名和80端口
@@ -70,7 +70,7 @@ server {
     proxy_set_header Connection upgrade;  # 处理 websocket 连接
 
     location / {
-        proxy_pass      http://xy-code-server:8080;  # 对应 docker-compose 里 networks-aliases
+        proxy_pass      http://xy-code-server:8080;  # 对应 Docker-compose 里 networks-aliases
     }
 }
 ```
@@ -79,4 +79,4 @@ server {
 
 1、首先启动应用1和应用2(会提示你没有网络)
 
-2、在 nginx 目录下启动 nginx, `docker-compose up`
+2、在 Nginx 目录下启动 Nginx, `Docker-compose up`
