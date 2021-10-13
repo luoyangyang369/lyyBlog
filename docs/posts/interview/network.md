@@ -19,6 +19,7 @@ external_link: true  # 在新标签中打开链接
 ## 网络
 
 [TCP 三次握手和四次挥手面试题](https://mp.weixin.qq.com/s?__biz=MzUxODAzNDg4NQ==&mid=2247484005&idx=1&sn=cb07ee1c891a7bdd0af3859543190202&scene=21#wechat_redirect)
+[网络](https://github.com/allentofight/easy-cs/tree/main/%E7%BD%91%E7%BB%9C)
 
 1. OSI 与 TCP/IP 各层的结构与功能,都有哪些协议?为什么网络要分层？
 2. 计算机网络的一些常见状态码
