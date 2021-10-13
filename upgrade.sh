@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
-cd lyyblog/
+cd /Users/luoyangyang/Documents/my_work/lyyblog
 yarn docs:build
 
 git add .
 git commit -m "更新博客"
+git push
 
 # 部署流程
 yarn docs:build
