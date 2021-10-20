@@ -11,8 +11,8 @@ copyright : ture  # 授权问题显示
 categories: 面试
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
-# prev: general2
-# next: general3
+prev: mysql
+next: network
 ---
 <!-- [[toc]]  # 在页面显示目录 -->
 
@@ -53,9 +53,7 @@ external_link: true  # 在新标签中打开链接
 8. volatile-lfu: 对所有设置了过期时间的key使用LFU算法进行删除
 
 总结：
-
-
-当存在热点数据时，LRU的效率很好，但偶发性的、周期性的批量操作会导致LRU命中率急剧下降，缓存污染情况比较严重
+> 当存在热点数据时，LRU的效率很好，但偶发性的、周期性的批量操作会导致LRU命中率急剧下降，缓存污染情况比较严重
 
 ### 常见题目
 

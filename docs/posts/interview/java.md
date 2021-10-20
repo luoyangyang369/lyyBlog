@@ -11,8 +11,8 @@ copyright : ture  # 授权问题显示
 categories: 面试
 auto_spacing: true  # 在中文和英文之间加入空格
 external_link: true  # 在新标签中打开链接
-# prev: general2
-# next: general3
+prev: learn
+next: mysql
 ---
 <!-- [[toc]]  # 在页面显示目录 -->
 
@@ -23,6 +23,8 @@ external_link: true  # 在新标签中打开链接
 [肝完这篇线程池，我咳血了](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247488182&idx=1&sn=58c058525d66ef8ce78fb8549c989489&chksm=e999e7a4deee6eb2284560e8ae072be520a8b173d02ceae12404db0d968b2658d541f12b5c95&cur_album_id=1475842875694301200&scene=190#rd)
 [java十个问题](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247491923&idx=1&sn=6b5082a70a35dcff6e6adc651bbd8b91&chksm=e99a1441deed9d575b37fea1c8c23615b65c0073c6523f9ed65a7ac18ef79343dcf4c7da0bb3&cur_album_id=1475842875694301200&scene=190#rd)
 [Java IO常见面试题](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247484945&idx=1&sn=229be49807e3c2a9621f42c0a6c0aeb6&source=41#wechat_redirect)
+[深入 AQS](https://mp.weixin.qq.com/s?__biz=MzI0ODk2NDIyMQ==&mid=2247483718&idx=1&sn=b46b2554382fd5ae922cc7778982539e&chksm=e999f454deee7d428cecca8c2bf5e851155c1f887f51e3ec389f7121e3352119c690e950c694&cur_album_id=1475842875694301200&scene=190#rd)
+[Java 并发进阶常见面试题总结](https://mp.weixin.qq.com/s/cdHfTTvMpH60SwG2bjTMBw)
 
 1. 什么是线程和进程? 线程与进程的关系,区别及优缺点？
 2. 说说并发与并行的区别?
@@ -50,6 +52,15 @@ external_link: true  # 在新标签中打开链接
 - 多线程之虚假唤醒： 在判断资源量时要用 while(num != 0) 而不是 if(num != 0)。
 - 字符串常量池在 JDK7 后就移动到 Java 堆中
 - 运行时常量池在方法区中
+
+### 泛型
+
+泛型其实就是一种参数化的集合，它限制了你添加进集合的类型。泛型的本质就是一种参数化类型。多态也可以看作是泛型的机制。一个类继承了父类，那么就能通过它的父类找到对应的子类，但是不能通过其他类来找到具体要找的这个类。泛型的设计之处就是希望对象或方法具有最广泛的表达能力。
+
+- 为了参数化类型，或者说可以将类型当作参数传递给一个类或者是方法。
+- 泛型信息只存在于代码编译阶段，在进入 JVM 之前，与泛型相关的信息会被擦除掉，专业术语叫做类型擦除。
+- 最显而易见的好处就是它不再需要对取出来的结果进行强制转换了。
+- <?>被称作无限定的通配符； <? extends T>被称作有上限的通配符； <? super T>被称作有下限的通配符
 
 ### NIO
 
@@ -90,18 +101,32 @@ external_link: true  # 在新标签中打开链接
 
 DirectByteBuffer是一个特殊的ByteBuffer，底层同样需要一块连续的内存，操作模式与普通的ByteBuffer一致，但这块内存是调用unsafe的native方法分配的堆外内存。
 
+### HashMap 
+
+扩容原理
+
+1. 调用put方法存值时，HashMap首先会调用Key的hashCode方法，然后基于此获取Key哈希码，通过哈希码快速找到某个桶，这个位置可以被称之为bucketIndex.
+2. 如果两个对象的hashCode不同，那么equals一定为false；否则，如果其hashCode相同，equals也不一定为 true。所以，理论上，hashCode可能存在碰撞的情况，当碰撞发生时，这时会取出bucketIndex桶内已存储的元素，并通过hashCode() 和 equals()来逐个比较以判断Key是否已存在。
+3. 如果已存在，则使用新Value值替换旧Value值，并返回旧Value值；如果不存在，则存放新的键值对到桶中。因此，在 HashMap中，equals() 方法只有在哈希码碰撞时才会被用到。
+
 ### ConcurrentHashMap
 
 ConcurrentHashmap在JDK1.7和1.8的版本改动比较大，1.7使用Segment+HashEntry分段锁的方式实现，1.8则抛弃了Segment，改为使用CAS+synchronized+Node实现，同样也加入了红黑树，避免链表过长导致性能的问题。
 
 默认的Segment长度是16，也就是支持16个线程的并发写，Segment之间相互不会受到影响。
 
+通过锁分段技术保证并发环境下的写操作； 通过 HashEntry的不变性、Volatile变量的内存可见性和加锁重读机制保证高效、安全的读操作； 通过不加锁和加锁两种方案控制跨段操作的的安全性。
+
 ### 垃圾回收
 
 Minor GC： 清理新生代
 Major GC： 清理老年代。
 Full GC： 清理整个堆空间—包括年轻代和老年代。
-- 空间分配担保： 在发生 MinorGC 之前，虚拟机会先检查老年代最大可用的连续空间是否大于新生代所有对象的总空间，如果大于，那么Minor GC 可以确保是安全的,如果不大于，那么虚拟机会查看 HandlePromotionFailure 设置值是否允许担保失败。如果允许，那么会继续检查老年代最大可用连续空间是否大于历次晋升到老年代对象的平均大小，如果大于则进行 Minor GC，否则可能进行一次 Full GC。
+
+- 空间分配担保： 
+  - 在发生 MinorGC 之前，虚拟机会先检查老年代最大可用的连续空间是否大于新生代所有对象的总空间，如果大于，那么Minor GC 可以确保是安全的,
+  - 如果不大于，那么虚拟机会查看 HandlePromotionFailure 设置值是否允许担保失败。
+  - 如果允许，那么会继续检查老年代最大可用连续空间是否大于历次晋升到老年代对象的平均大小，如果大于则进行 Minor GC，否则可能进行一次 Full GC。
 
 ### 线程池 java.util.concurrent.ThreadPoolExecutor
 
@@ -177,14 +202,16 @@ Executors.newCachedThreadPool // 动态扩容 执行很多短期异步的小程�
 ### JVM 内存区域
 [据说看完这篇 JVM 要一小时](https://mp.weixin.qq.com/s/RabFNSMDN7Qv2SBXfYMYNw)
 
+![Java内存](/img/Java内存区域.png)
+
 ```
 1. 为什么 jdk8 变成了元空间： 收购了 jRockit ， 将它和 Hotspot 合并统一。 
 2. 如何确定垃圾？ 引用计数 or 可达性算法(GC Roots)
 3. GC Roots？： 1、虚拟机栈(栈帧中的局部变量表) 2、方法区中类静态属性 3、方法区常量引用的对象 4、本地方法栈(Native 方法)引用的对象
-3. JVM 参数：
+4. JVM 参数：
     - 参数类型： 1、标配参数； 2、X参数 3、 XX参数(重点)
     - -XX:+PrintFlagsFinal(表示打印出XX选项在运行程序时生效的值， 带冒号说明被修改过)
-4. 常用配置 JVM 参数： 
+5. 常用配置 JVM 参数： 
     - -Xms(初始大小内存， 默认是物理内存的1/64) -Xmx(最大分配内存， 默认为物理内存1/4) -Xss(设置单个线程栈的大小， 一般默认为 512k-1024k)
     - -Xmn(设置年轻代大小， 一般不用调) -XX:MetaspaceSize(元空间大小， 默认20+M) -XX:+PrintGCDetails(在发生垃圾回收时打印内存回收详细的日志，并在进程退出时输出当前内存各区域的分配情况)
     - -XX:SurvivorRatio(设置新生代Eden和S0/S1的比例， 默认是8， 即8：1：1， 4就是4：1：1) -XX:NewRatio(年轻代和老年代的占比， 默认是2， 1/3:2/3， 4则是1/5:4/5)
@@ -207,6 +234,15 @@ Executors.newCachedThreadPool // 动态扩容 执行很多短期异步的小程�
   2. 此方法不需要定义，自动将所有类变量和静态代码块的语句合并起来
   3. `不同于类的构造器` 构造器是虚拟机视角下的 `<init>`
 ```
+
+### 父子类的加载顺序？
+
+1. 父类静态代码块(包括静态初始化块，静态属性，但不包括静态方法)
+2. 子类静态代码块(包括静态初始化块，静态属性，但不包括静态方法 )
+3. 父类非静态代码块( 包括非静态初始化块，非静态属性 )
+4. 父类构造函数
+5. 子类非静态代码块 ( 包括非静态初始化块，非静态属性 )
+6. 子类构造函数
 
 ### 请你说一下对象的内存布局？
 
@@ -357,10 +393,18 @@ BlockingQueue 的核心方法
   - 只能保证一个共享变量的操作： 只对一个共享变量操作可以保证原子性，但是多个则不行，多个可以通过AtomicReference来处理或者使用锁synchronized实现。
   - ABA 问题， 通过版本号和时间戳。 Java 有 AtomicStampedReference 来解决
 
-### AQS()
+### AQS(AbstractQueuedSynchronizer) 实现原理
 
+![AQS](/img/AQS.png)
+
+AQS中 维护了一个volatile int state（代表共享资源）和一个FIFO线程等待、（多线程争用资源被阻塞时会进入此队列）。
+
+这里volatile能够保证多线程下的可见性，当state=1则代表当前对象锁已经被占有，其他线程来加锁时则会失败，加锁失败的线程会被放入一个FIFO的等待队列中，比列会被UNSAFE.park()操作挂起，等待其他获取锁的线程释放锁才能够被唤醒。
+
+另外state的操作都是通过CAS来保证其并发修改的安全性。
+
+具体原理我们可以用一张图来简单概括：
 ![AQS](/img/AQS2.jpg)
-![AQS](/img/AQS相关用法.jpg)
 
 ### Spring AOP顺序
 
@@ -486,6 +530,23 @@ JMM 关于同步的规定：
 
 ![volatile禁用重排序的规则](/img/volatile禁用重排序的规则.webp)
 
+### 内存屏障是什么
+
+- 硬件层的内存屏障分为两种：Load Barrier 和 Store Barrier即读屏障和写屏障。
+- 内存屏障有两个作用：
+  - 阻止屏障两侧的指令重排序；
+  - 强制把写缓冲区/高速缓存中的脏数据等写回主内存，让缓存中相应的数据失效。
+- 对于Load Barrier来说，在指令前插入Load Barrier，可以让高速缓存中的数据失效，强制从新从主内存加载数据；
+- 对于Store Barrier来说，在指令后插入Store Barrier，能让写入缓存中的最新数据更新写入主内存，让其他线程可见。
+
+### volatile语义中的内存屏障
+
+- volatile的内存屏障策略非常严格保守，非常悲观且毫无安全感的心态：
+  - 在每个volatile写操作前插入StoreStore屏障，在写操作后插入StoreLoad屏障；
+  - 在每个volatile读操作前插入LoadLoad屏障，在读操作后插入LoadStore屏障；
+
+- 由于内存屏障的作用，避免了volatile变量和其它指令重排序、线程之间实现了通信，使得volatile表现出了锁的特性。
+
 ### 集合不安全问题
 
 集合类中的fail-fast： 默认指的是Java集合的一种错误检测机制。当多个线程对部分集合进行结构上的改变的操作时，有可能会产生fail-fast机制，这个时候就会抛出 `java.util.ConcurrentModificationException`。当当方法检测到对象的并发修改，但不允许这种修改时就抛出该异常。
@@ -504,4 +565,9 @@ JMM 关于同步的规定：
 - sleep 会让出 CPU 执行时间且强制切换上下文， wait 不一定， wait 后还有机会重新竞争到锁
 
 - yield 让出 CPU， 执行后线程进入就绪状态， 还有可能再次抢到 CPU
-- join 就是插队： 在线程中调用另一个线程的 join() 方法，会将当前线程挂起，而不是忙等待，直到目标线程结束。
+- join： 在线程中调用另一个线程的 join() 方法，是让主线程会等待子线程结束之后才能继续运行
+
+### 对象访问定位的方式有哪些？
+
+- 句柄访问方式： 如果使用句柄访问方式的话，Java 堆中可能会划分出一块内存作为句柄池，引用（reference）中存储的是对象的句柄地址，而句柄中包含了对象的实例数据与类型数据各自具体的地址信息。
+- 直接指针： 如果使用直接指针访问的话，Java 堆中对象的内存布局就会有所区别，栈区引用指示的是堆中的实例数据的地址，如果只是访问对象本身的话，就不会多一次直接访问的开销，而对象类型数据的指针是存在于方法区中，如果定位的话，需要多一次直接定位开销。

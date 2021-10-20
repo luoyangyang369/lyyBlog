@@ -8,6 +8,8 @@ top: 100  # 设置权重, 主页那个先显示
 copyright : ture  # 授权问题显示
 categories: 面试
 sticky: 1  # 文章置顶
+# prev: general2
+next: java
 ---
 
 记录平时发现的学习网站
