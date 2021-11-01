@@ -17,6 +17,7 @@ next: network
 <!-- [[toc]]  # 在页面显示目录 -->
 
 [《吊打面试官》系列-缓存雪崩、击穿、穿透](https://mp.weixin.qq.com/s?__biz=MzAwNDA2OTM1Ng==&mid=2453140871&idx=3&sn=0ad5fc9d0474089a4271b16bf47b7cb0&chksm=8cf2d704bb855e1208ee8fead319c27204a00c64b484a950014527379d022623350e83e9353d&scene=21#wechat_redirect)
+[Redis 高可用篇：你管这叫 Sentinel 哨兵集群原理](https://mp.weixin.qq.com/s?__biz=MzkzMDI1NjcyOQ==&mid=2247487780&idx=1&sn=9a0ea0971e661556c4c5e438ab1b081b&source=41#wechat_redirect)
 
 ## Redis
 
@@ -31,6 +32,13 @@ next: network
 9. Redis 持久化机制(怎么保证 Redis 挂掉之后再重启数据可以进行恢复)
 10. Redis 缓存穿透、缓存雪崩？
 11. 如何保证缓存和数据库数据的一致性？
+
+
+### 哨兵机制的主要任务
+
+1. **监控**：持续监控 master 、slave 是否处于预期工作状态。
+2. **自动切换主库**：当 Master 运行故障，哨兵启动自动故障恢复流程：从 slave 中选择一台作为新 master。
+3. **通知**：让 slave 执行 replicaof ，与新的 master 同步；并且通知客户端与新 master 建立连接。
 
 ### Redis 键过期后是不是马上会被删除
 
